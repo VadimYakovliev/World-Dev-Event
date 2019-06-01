@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Activity {
+final class Activity {
     let title: String
     let preview: PreviewActivity
     let details: DetailsActivity

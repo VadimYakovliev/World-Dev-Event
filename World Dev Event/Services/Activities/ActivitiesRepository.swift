@@ -14,13 +14,13 @@ protocol ActivitiesRepositoryContract {
     func getActivities(byType type: ActivityType, handler: @escaping Handler<[Activity]>)
 }
 
-class ActivitiesRepository {
+final class ActivitiesRepository {
     private let activitiesNetworking: ActivitiesNetworkingContract
     
     private var events = [Activity]()
     private var shops = [Activity]()
     
-    init(activitiesNetworking: ActivitiesNetworkingContract = ActivitiesNetworking()) {
+    init(activitiesNetworking: ActivitiesNetworkingContract) {
         self.activitiesNetworking = activitiesNetworking
     }
 }

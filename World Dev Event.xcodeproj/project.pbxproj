@@ -41,6 +41,14 @@
 		FD8071B622A28961004837A1 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071B522A28961004837A1 /* Coordinates.swift */; };
 		FD8071B822A28C29004837A1 /* Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071B722A28C29004837A1 /* Handler.swift */; };
 		FD8071BA22A2A513004837A1 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071B922A2A513004837A1 /* Activity.swift */; };
+		FD8071BC22A2AFA9004837A1 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071BB22A2AFA9004837A1 /* UIViewController+Extensions.swift */; };
+		FD8071C022A2B219004837A1 /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071BF22A2B219004837A1 /* AppConfigurator.swift */; };
+		FD8071C222A2B2B0004837A1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071C122A2B2B0004837A1 /* Coordinator.swift */; };
+		FD8071C422A2B368004837A1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071C322A2B368004837A1 /* AppCoordinator.swift */; };
+		FD8071C622A2B615004837A1 /* ActivitiesServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071C522A2B615004837A1 /* ActivitiesServiceFactory.swift */; };
+		FD8071C822A2BC8A004837A1 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071C722A2BC8A004837A1 /* BasePresenter.swift */; };
+		FD8071CB22A2CFE7004837A1 /* ScenesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071CA22A2CFE7004837A1 /* ScenesFactory.swift */; };
+		FD8071CD22A2D34C004837A1 /* Error+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071CC22A2D34C004837A1 /* Error+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +112,14 @@
 		FD8071B522A28961004837A1 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		FD8071B722A28C29004837A1 /* Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handler.swift; sourceTree = "<group>"; };
 		FD8071B922A2A513004837A1 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		FD8071BB22A2AFA9004837A1 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		FD8071BF22A2B219004837A1 /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
+		FD8071C122A2B2B0004837A1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		FD8071C322A2B368004837A1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FD8071C522A2B615004837A1 /* ActivitiesServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesServiceFactory.swift; sourceTree = "<group>"; };
+		FD8071C722A2BC8A004837A1 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		FD8071CA22A2CFE7004837A1 /* ScenesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesFactory.swift; sourceTree = "<group>"; };
+		FD8071CC22A2D34C004837A1 /* Error+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				FD80712A22A24900004837A1 /* AppDelegate.swift */,
+				FD8071BF22A2B219004837A1 /* AppConfigurator.swift */,
+				FD8071C122A2B2B0004837A1 /* Coordinator.swift */,
 				FD80717222A25125004837A1 /* Modules */,
 				FD8071B422A28668004837A1 /* Models */,
 				FD80718422A25F11004837A1 /* Services */,
@@ -200,10 +218,12 @@
 		FD80717222A25125004837A1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				FD80712C22A24900004837A1 /* BaseViewController.swift */,
+				FD8071C322A2B368004837A1 /* AppCoordinator.swift */,
+				FD8071CA22A2CFE7004837A1 /* ScenesFactory.swift */,
 				FD80717722A25644004837A1 /* MainScene */,
 				FD80717A22A257C4004837A1 /* DetailsScene */,
 				FD80718A22A26382004837A1 /* MapScene */,
+				FD8071C922A2BCA0004837A1 /* Base */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -250,6 +270,7 @@
 			children = (
 				FD80718022A25ED4004837A1 /* ActivitiesRepository.swift */,
 				FD80718222A25EF7004837A1 /* ActivitiesNetworking.swift */,
+				FD8071C522A2B615004837A1 /* ActivitiesServiceFactory.swift */,
 			);
 			path = Activities;
 			sourceTree = "<group>";
@@ -276,6 +297,8 @@
 			isa = PBXGroup;
 			children = (
 				FD80719C22A2688F004837A1 /* UIColor+Extensions.swift */,
+				FD8071BB22A2AFA9004837A1 /* UIViewController+Extensions.swift */,
+				FD8071CC22A2D34C004837A1 /* Error+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -309,6 +332,15 @@
 				FD8071B522A28961004837A1 /* Coordinates.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FD8071C922A2BCA0004837A1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FD80712C22A24900004837A1 /* BaseViewController.swift */,
+				FD8071C722A2BC8A004837A1 /* BasePresenter.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,9 +460,12 @@
 			files = (
 				FD80712D22A24900004837A1 /* BaseViewController.swift in Sources */,
 				FD80719D22A2688F004837A1 /* UIColor+Extensions.swift in Sources */,
+				FD8071C022A2B219004837A1 /* AppConfigurator.swift in Sources */,
 				FD80717422A255C0004837A1 /* ActivitiesViewController.swift in Sources */,
 				FD80718C22A263CE004837A1 /* MapPresenter.swift in Sources */,
 				FD8071B622A28961004837A1 /* Coordinates.swift in Sources */,
+				FD8071C422A2B368004837A1 /* AppCoordinator.swift in Sources */,
+				FD8071C222A2B2B0004837A1 /* Coordinator.swift in Sources */,
 				FD80717922A257BD004837A1 /* DetailsViewController.swift in Sources */,
 				FD8071B822A28C29004837A1 /* Handler.swift in Sources */,
 				FD80717E22A25E3E004837A1 /* DispatchQueue.swift in Sources */,
@@ -438,13 +473,18 @@
 				FD8071BA22A2A513004837A1 /* Activity.swift in Sources */,
 				FD80718722A2608E004837A1 /* ImageDataProvider.swift in Sources */,
 				FD80718322A25EF7004837A1 /* ActivitiesNetworking.swift in Sources */,
+				FD8071BC22A2AFA9004837A1 /* UIViewController+Extensions.swift in Sources */,
+				FD8071C822A2BC8A004837A1 /* BasePresenter.swift in Sources */,
 				FD80717C22A257F4004837A1 /* DetailsPresenter.swift in Sources */,
 				FD80718922A2637C004837A1 /* MapViewController.swift in Sources */,
+				FD8071CB22A2CFE7004837A1 /* ScenesFactory.swift in Sources */,
+				FD8071CD22A2D34C004837A1 /* Error+Extensions.swift in Sources */,
 				FD80712B22A24900004837A1 /* AppDelegate.swift in Sources */,
 				FD80714D22A24A81004837A1 /* Constants.swift in Sources */,
 				FD80718E22A2656F004837A1 /* UIStyles.swift in Sources */,
 				FD80717622A255DD004837A1 /* ActivitiesPresenter.swift in Sources */,
 				FD80718122A25ED4004837A1 /* ActivitiesRepository.swift in Sources */,
+				FD8071C622A2B615004837A1 /* ActivitiesServiceFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
