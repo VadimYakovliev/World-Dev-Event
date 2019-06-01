@@ -12,7 +12,7 @@ protocol MapViewContract: AnyObject {
     
 }
 
-class MapViewController: BaseViewController {
+final class MapViewController: BaseViewController {
     
 }
 

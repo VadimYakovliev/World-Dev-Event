@@ -1,5 +1,5 @@
 //
-//  MapPresenter.swift
+//  Coordinates.swift
 //  World Dev Event
 //
 //  Created by Vadym Yakovliev on 6/1/19.
@@ -8,14 +8,7 @@
 
 import Foundation
 
-protocol MapPresenterContract {
-    
-}
-
-final class MapPresenter {
-    
-}
-
-extension MapPresenter: MapPresenterContract {
-    
+struct Coordinates {
+    let latitude: String
+    let longitude: String
 }

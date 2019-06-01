@@ -9,7 +9,7 @@
 import Foundation
 
 enum API {
-    private static let domain = "https://smartbox.software"
+    private static let domain = "http://smartbox.software"
     
     static let activities = domain + "/tt/TT.json"
 }

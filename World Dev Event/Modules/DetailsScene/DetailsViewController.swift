@@ -12,7 +12,7 @@ protocol DetailsViewContract: AnyObject {
     
 }
 
-class DetailsViewController: BaseViewController {
+final class DetailsViewController: BaseViewController {
     
 }
 

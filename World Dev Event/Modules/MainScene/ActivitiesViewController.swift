@@ -12,7 +12,7 @@ protocol ActivitiesViewContract: AnyObject {
     
 }
 
-class ActivitiesViewController: BaseViewController {
+final class ActivitiesViewController: BaseViewController {
    
 }
 
