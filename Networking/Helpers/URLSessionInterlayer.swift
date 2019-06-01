@@ -8,25 +8,25 @@
 
 import Foundation
 
-typealias DataTaskCompletion = (Data?, URLResponse?, Error?) -> Void
+public typealias DataTaskCompletion = (Data?, URLResponse?, Error?) -> Void
 
 // MARK: - URLSession wrapper
 
-protocol URLSessionContract {
+public protocol URLSessionContract {
     func dataTask(with request: URLRequest, completionHandler: DataTaskCompletion?) -> DataTask?
 }
 
-final class URLSessionInterlayer: URLSessionContract {
-    init() {}
+final public class URLSessionInterlayer: URLSessionContract {
+    public init() {}
     
-    func dataTask(with request: URLRequest, completionHandler: DataTaskCompletion?) -> DataTask? {
+    public func dataTask(with request: URLRequest, completionHandler: DataTaskCompletion?) -> DataTask? {
         return completionHandler.map { URLSession.shared.dataTask(with: request, completionHandler: $0) }
     }
 }
 
 // MARK: - URLSessionDataTask wrapper
 
-protocol DataTask {
+public protocol DataTask {
     func resume()
     func cancel()
     
@@ -34,7 +34,7 @@ protocol DataTask {
 }
 
 extension URLSessionDataTask: DataTask {
-    var sessionState: SessionState {
+    public var sessionState: SessionState {
         return SessionState(rawValue: self.state.rawValue) ?? .undefined
     }
 }
