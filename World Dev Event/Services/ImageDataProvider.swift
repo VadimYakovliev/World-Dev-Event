@@ -8,6 +8,6 @@
 
 import Foundation
 
-class ImageDataProvider {
+final class ImageDataProvider {
     
 }

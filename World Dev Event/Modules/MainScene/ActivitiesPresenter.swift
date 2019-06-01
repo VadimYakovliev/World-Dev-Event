@@ -8,14 +8,67 @@
 
 import Foundation
 
-protocol ActivitiesPresenterContract {
-    
+protocol ActivitiesPresenterContract: BasePresenterContract {
+    func switchState(index: Int)
+    func activityDidSelect(handler: ((Activity) -> Void)?)
 }
 
 final class ActivitiesPresenter {
+    unowned var view: ActivitiesViewContract
+    private let repository: ActivitiesRepositoryContract
     
+    var onActivitySelectListener: ((Activity) -> Void)?
+    
+    private var sceneState: ActivityType = .event {
+        didSet {
+            self.fetchData()
+        }
+    }
+    
+    init(view: ActivitiesViewContract, repository: ActivitiesRepositoryContract) {
+        self.view = view
+        self.repository = repository
+    }
 }
 
 extension ActivitiesPresenter: ActivitiesPresenterContract {
+    func onViewDidLoad() {
+        self.fetchData()
+    }
     
+    func switchState(index: Int) {
+        self.sceneState = (index == .zero) ? .event : .shop
+    }
+    
+    func activityDidSelect(handler: ((Activity) -> Void)?) {
+        self.onActivitySelectListener = handler
+    }
+}
+
+private extension ActivitiesPresenter {
+    func alert(text: String) {
+        self.view.showAlert(text: text,
+                            defaultButtonTitle: Titles.Buttons.retry,
+                            cancelButtonTitle: Titles.Buttons.cancel) { [weak self] action in
+                                switch action {
+                                case .defaultPressed:
+                                    self?.fetchData()
+                                case .cancelPressed:
+                                    break
+                                }
+        }
+    }
+    
+    func fetchData() {
+        onGlobalUtilityQueue {
+            self.repository.getActivities(byType: self.sceneState) { [weak self] result in
+                switch result {
+                case .success(let activities):
+                    self?.view.update(activities: activities)
+                case .failure(let error):
+                    self?.alert(text: error.description)
+                }
+            }
+        }
+    }
 }

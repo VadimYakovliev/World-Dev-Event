@@ -13,7 +13,17 @@ protocol DetailsViewContract: AnyObject {
 }
 
 final class DetailsViewController: BaseViewController {
+    var presenter: DetailsPresenterContract!
     
+    func bind(presenter: DetailsPresenterContract) {
+        self.presenter = presenter
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.presenter.onViewDidLoad()
+    }
 }
 
 extension DetailsViewController: DetailsViewContract {

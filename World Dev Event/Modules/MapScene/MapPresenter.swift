@@ -8,14 +8,20 @@
 
 import Foundation
 
-protocol MapPresenterContract {
+protocol MapPresenterContract: BasePresenterContract {
     
 }
 
 final class MapPresenter {
+    unowned var view: MapViewContract
     
+    init(view: MapViewContract) {
+        self.view = view
+    }
 }
 
 extension MapPresenter: MapPresenterContract {
-    
+    func onViewDidLoad() {
+        
+    }
 }

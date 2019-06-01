@@ -6,16 +6,16 @@
 //  Copyright © 2019 Vadim Yakovliev. All rights reserved.
 //
 
-import Networking
+import Foundation
 
 protocol ActivitiesNetworkingContract {
     func receiveData(_ handler: @escaping Handler<[SimpleActivity]>)
 }
 
 final class ActivitiesNetworking {
-    private let networking: NetworkingContract
+    private let networking: NetworkingService
     
-    init(networking: NetworkingContract = Networking()) {
+    init(networking: NetworkingService) {
         self.networking = networking
     }
 }
@@ -41,7 +41,7 @@ private extension ActivitiesNetworking {
     func handle(data: Data?, handler: Handler<[SimpleActivity]>) {
         guard
             let activities: [SimpleActivity] = data?.decoded()
-            else { handler(.failure(NetworkErrors.undefined)); return }
+            else { handler(.failure(NetworkingError.undefined)); return }
         
         handler(.success(activities))
     }
