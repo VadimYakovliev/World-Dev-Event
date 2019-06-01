@@ -8,34 +8,78 @@
 
 /* Begin PBXBuildFile section */
 		FD80712B22A24900004837A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80712A22A24900004837A1 /* AppDelegate.swift */; };
-		FD80712D22A24900004837A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80712C22A24900004837A1 /* ViewController.swift */; };
-		FD80713022A24900004837A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD80712E22A24900004837A1 /* Main.storyboard */; };
+		FD80712D22A24900004837A1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80712C22A24900004837A1 /* BaseViewController.swift */; };
 		FD80713222A24901004837A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD80713122A24901004837A1 /* Assets.xcassets */; };
 		FD80713522A24901004837A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD80713322A24901004837A1 /* LaunchScreen.storyboard */; };
-		FD80714022A24901004837A1 /* World_Dev_EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80713F22A24901004837A1 /* World_Dev_EventTests.swift */; };
+		FD80714D22A24A81004837A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80714C22A24A81004837A1 /* Constants.swift */; };
+		FD80716522A24F36004837A1 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = FD80715522A24F36004837A1 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD80716822A24F36004837A1 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD80715322A24F36004837A1 /* Networking.framework */; };
+		FD80716922A24F36004837A1 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD80715322A24F36004837A1 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD80717422A255C0004837A1 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80717322A255C0004837A1 /* ActivitiesViewController.swift */; };
+		FD80717622A255DD004837A1 /* ActivitiesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80717522A255DD004837A1 /* ActivitiesPresenter.swift */; };
+		FD80717922A257BD004837A1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80717822A257BD004837A1 /* DetailsViewController.swift */; };
+		FD80717C22A257F4004837A1 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80717B22A257F4004837A1 /* DetailsPresenter.swift */; };
+		FD80717E22A25E3E004837A1 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80717D22A25E3E004837A1 /* DispatchQueue.swift */; };
+		FD80718122A25ED4004837A1 /* ActivitiesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80718022A25ED4004837A1 /* ActivitiesRepository.swift */; };
+		FD80718322A25EF7004837A1 /* ActivitiesNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80718222A25EF7004837A1 /* ActivitiesNetworking.swift */; };
+		FD80718722A2608E004837A1 /* ImageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80718622A2608E004837A1 /* ImageDataProvider.swift */; };
+		FD80718922A2637C004837A1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80718822A2637C004837A1 /* MapViewController.swift */; };
+		FD80718C22A263CE004837A1 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80718B22A263CE004837A1 /* MapPresenter.swift */; };
+		FD80718E22A2656F004837A1 /* UIStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80718D22A2656F004837A1 /* UIStyles.swift */; };
+		FD80719622A265ED004837A1 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD80719022A265ED004837A1 /* Roboto-Medium.ttf */; };
+		FD80719822A265ED004837A1 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD80719222A265ED004837A1 /* Roboto-Regular.ttf */; };
+		FD80719D22A2688F004837A1 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80719C22A2688F004837A1 /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FD80713C22A24901004837A1 /* PBXContainerItemProxy */ = {
+		FD80716622A24F36004837A1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FD80711F22A24900004837A1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FD80712622A24900004837A1;
-			remoteInfo = "World Dev Event";
+			remoteGlobalIDString = FD80715222A24F36004837A1;
+			remoteInfo = Networking;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FD80716D22A24F36004837A1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FD80716922A24F36004837A1 /* Networking.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FD80712722A24900004837A1 /* World Dev Event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Dev Event.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD80712A22A24900004837A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD80712C22A24900004837A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FD80712F22A24900004837A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FD80712C22A24900004837A1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FD80713122A24901004837A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD80713422A24901004837A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD80713622A24901004837A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD80713B22A24901004837A1 /* World Dev EventTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "World Dev EventTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD80713F22A24901004837A1 /* World_Dev_EventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World_Dev_EventTests.swift; sourceTree = "<group>"; };
-		FD80714122A24901004837A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD80714C22A24A81004837A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FD80715322A24F36004837A1 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD80715522A24F36004837A1 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		FD80715622A24F36004837A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD80717322A255C0004837A1 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		FD80717522A255DD004837A1 /* ActivitiesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesPresenter.swift; sourceTree = "<group>"; };
+		FD80717822A257BD004837A1 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		FD80717B22A257F4004837A1 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		FD80717D22A25E3E004837A1 /* DispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
+		FD80718022A25ED4004837A1 /* ActivitiesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesRepository.swift; sourceTree = "<group>"; };
+		FD80718222A25EF7004837A1 /* ActivitiesNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesNetworking.swift; sourceTree = "<group>"; };
+		FD80718622A2608E004837A1 /* ImageDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataProvider.swift; sourceTree = "<group>"; };
+		FD80718822A2637C004837A1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FD80718B22A263CE004837A1 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		FD80718D22A2656F004837A1 /* UIStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStyles.swift; sourceTree = "<group>"; };
+		FD80719022A265ED004837A1 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		FD80719222A265ED004837A1 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		FD80719C22A2688F004837A1 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,10 +87,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD80716822A24F36004837A1 /* Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD80713822A24901004837A1 /* Frameworks */ = {
+		FD80715022A24F36004837A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				FD80712922A24900004837A1 /* World Dev Event */,
-				FD80713E22A24901004837A1 /* World Dev EventTests */,
+				FD80715422A24F36004837A1 /* Networking */,
 				FD80712822A24900004837A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				FD80712722A24900004837A1 /* World Dev Event.app */,
-				FD80713B22A24901004837A1 /* World Dev EventTests.xctest */,
+				FD80715322A24F36004837A1 /* Networking.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,25 +123,146 @@
 			isa = PBXGroup;
 			children = (
 				FD80712A22A24900004837A1 /* AppDelegate.swift */,
-				FD80712C22A24900004837A1 /* ViewController.swift */,
-				FD80712E22A24900004837A1 /* Main.storyboard */,
-				FD80713122A24901004837A1 /* Assets.xcassets */,
-				FD80713322A24901004837A1 /* LaunchScreen.storyboard */,
-				FD80713622A24901004837A1 /* Info.plist */,
+				FD80717222A25125004837A1 /* Modules */,
+				FD80718422A25F11004837A1 /* Services */,
+				FD80717122A25105004837A1 /* Common */,
+				FD80714A22A24A06004837A1 /* Resources */,
+				FD80714B22A24A4A004837A1 /* Support */,
 			);
 			path = "World Dev Event";
 			sourceTree = "<group>";
 		};
-		FD80713E22A24901004837A1 /* World Dev EventTests */ = {
+		FD80714A22A24A06004837A1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FD80713F22A24901004837A1 /* World_Dev_EventTests.swift */,
-				FD80714122A24901004837A1 /* Info.plist */,
+				FD80718F22A265ED004837A1 /* Fonts */,
+				FD80713122A24901004837A1 /* Assets.xcassets */,
 			);
-			path = "World Dev EventTests";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FD80714B22A24A4A004837A1 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				FD80713322A24901004837A1 /* LaunchScreen.storyboard */,
+				FD80713622A24901004837A1 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		FD80715422A24F36004837A1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FD80715522A24F36004837A1 /* Networking.h */,
+				FD80715622A24F36004837A1 /* Info.plist */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FD80717122A25105004837A1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FD80719E22A268BB004837A1 /* Extensions */,
+				FD80717F22A25E43004837A1 /* Helpers */,
+				FD80714C22A24A81004837A1 /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FD80717222A25125004837A1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FD80712C22A24900004837A1 /* BaseViewController.swift */,
+				FD80717722A25644004837A1 /* MainScene */,
+				FD80717A22A257C4004837A1 /* DetailsScene */,
+				FD80718A22A26382004837A1 /* MapScene */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FD80717722A25644004837A1 /* MainScene */ = {
+			isa = PBXGroup;
+			children = (
+				FD80717322A255C0004837A1 /* ActivitiesViewController.swift */,
+				FD80717522A255DD004837A1 /* ActivitiesPresenter.swift */,
+			);
+			path = MainScene;
+			sourceTree = "<group>";
+		};
+		FD80717A22A257C4004837A1 /* DetailsScene */ = {
+			isa = PBXGroup;
+			children = (
+				FD80717822A257BD004837A1 /* DetailsViewController.swift */,
+				FD80717B22A257F4004837A1 /* DetailsPresenter.swift */,
+			);
+			path = DetailsScene;
+			sourceTree = "<group>";
+		};
+		FD80717F22A25E43004837A1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FD80717D22A25E3E004837A1 /* DispatchQueue.swift */,
+				FD80718D22A2656F004837A1 /* UIStyles.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FD80718422A25F11004837A1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FD80718522A26066004837A1 /* Activities */,
+				FD80718622A2608E004837A1 /* ImageDataProvider.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FD80718522A26066004837A1 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				FD80718022A25ED4004837A1 /* ActivitiesRepository.swift */,
+				FD80718222A25EF7004837A1 /* ActivitiesNetworking.swift */,
+			);
+			path = Activities;
+			sourceTree = "<group>";
+		};
+		FD80718A22A26382004837A1 /* MapScene */ = {
+			isa = PBXGroup;
+			children = (
+				FD80718822A2637C004837A1 /* MapViewController.swift */,
+				FD80718B22A263CE004837A1 /* MapPresenter.swift */,
+			);
+			path = MapScene;
+			sourceTree = "<group>";
+		};
+		FD80718F22A265ED004837A1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FD80719022A265ED004837A1 /* Roboto-Medium.ttf */,
+				FD80719222A265ED004837A1 /* Roboto-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FD80719E22A268BB004837A1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FD80719C22A2688F004837A1 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FD80714E22A24F36004837A1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD80716522A24F36004837A1 /* Networking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		FD80712622A24900004837A1 /* World Dev Event */ = {
@@ -106,33 +272,35 @@
 				FD80712322A24900004837A1 /* Sources */,
 				FD80712422A24900004837A1 /* Frameworks */,
 				FD80712522A24900004837A1 /* Resources */,
+				FD80716D22A24F36004837A1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FD80716722A24F36004837A1 /* PBXTargetDependency */,
 			);
 			name = "World Dev Event";
 			productName = "World Dev Event";
 			productReference = FD80712722A24900004837A1 /* World Dev Event.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FD80713A22A24901004837A1 /* World Dev EventTests */ = {
+		FD80715222A24F36004837A1 /* Networking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FD80714722A24901004837A1 /* Build configuration list for PBXNativeTarget "World Dev EventTests" */;
+			buildConfigurationList = FD80716A22A24F36004837A1 /* Build configuration list for PBXNativeTarget "Networking" */;
 			buildPhases = (
-				FD80713722A24901004837A1 /* Sources */,
-				FD80713822A24901004837A1 /* Frameworks */,
-				FD80713922A24901004837A1 /* Resources */,
+				FD80714E22A24F36004837A1 /* Headers */,
+				FD80714F22A24F36004837A1 /* Sources */,
+				FD80715022A24F36004837A1 /* Frameworks */,
+				FD80715122A24F36004837A1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FD80713D22A24901004837A1 /* PBXTargetDependency */,
 			);
-			name = "World Dev EventTests";
-			productName = "World Dev EventTests";
-			productReference = FD80713B22A24901004837A1 /* World Dev EventTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = Networking;
+			productName = Networking;
+			productReference = FD80715322A24F36004837A1 /* Networking.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -147,9 +315,8 @@
 					FD80712622A24900004837A1 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
-					FD80713A22A24901004837A1 = {
+					FD80715222A24F36004837A1 = {
 						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = FD80712622A24900004837A1;
 					};
 				};
 			};
@@ -167,7 +334,7 @@
 			projectRoot = "";
 			targets = (
 				FD80712622A24900004837A1 /* World Dev Event */,
-				FD80713A22A24901004837A1 /* World Dev EventTests */,
+				FD80715222A24F36004837A1 /* Networking */,
 			);
 		};
 /* End PBXProject section */
@@ -179,11 +346,12 @@
 			files = (
 				FD80713522A24901004837A1 /* LaunchScreen.storyboard in Resources */,
 				FD80713222A24901004837A1 /* Assets.xcassets in Resources */,
-				FD80713022A24900004837A1 /* Main.storyboard in Resources */,
+				FD80719822A265ED004837A1 /* Roboto-Regular.ttf in Resources */,
+				FD80719622A265ED004837A1 /* Roboto-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD80713922A24901004837A1 /* Resources */ = {
+		FD80715122A24F36004837A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -197,38 +365,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD80712D22A24900004837A1 /* ViewController.swift in Sources */,
+				FD80712D22A24900004837A1 /* BaseViewController.swift in Sources */,
+				FD80719D22A2688F004837A1 /* UIColor+Extensions.swift in Sources */,
+				FD80717422A255C0004837A1 /* ActivitiesViewController.swift in Sources */,
+				FD80718C22A263CE004837A1 /* MapPresenter.swift in Sources */,
+				FD80717922A257BD004837A1 /* DetailsViewController.swift in Sources */,
+				FD80717E22A25E3E004837A1 /* DispatchQueue.swift in Sources */,
+				FD80718722A2608E004837A1 /* ImageDataProvider.swift in Sources */,
+				FD80718322A25EF7004837A1 /* ActivitiesNetworking.swift in Sources */,
+				FD80717C22A257F4004837A1 /* DetailsPresenter.swift in Sources */,
+				FD80718922A2637C004837A1 /* MapViewController.swift in Sources */,
 				FD80712B22A24900004837A1 /* AppDelegate.swift in Sources */,
+				FD80714D22A24A81004837A1 /* Constants.swift in Sources */,
+				FD80718E22A2656F004837A1 /* UIStyles.swift in Sources */,
+				FD80717622A255DD004837A1 /* ActivitiesPresenter.swift in Sources */,
+				FD80718122A25ED4004837A1 /* ActivitiesRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD80713722A24901004837A1 /* Sources */ = {
+		FD80714F22A24F36004837A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD80714022A24901004837A1 /* World_Dev_EventTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FD80713D22A24901004837A1 /* PBXTargetDependency */ = {
+		FD80716722A24F36004837A1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FD80712622A24900004837A1 /* World Dev Event */;
-			targetProxy = FD80713C22A24901004837A1 /* PBXContainerItemProxy */;
+			target = FD80715222A24F36004837A1 /* Networking */;
+			targetProxy = FD80716622A24F36004837A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FD80712E22A24900004837A1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FD80712F22A24900004837A1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FD80713322A24901004837A1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -362,12 +534,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PU97M7F5F;
-				INFOPLIST_FILE = "World Dev Event/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/World Dev Event/Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vadim.yakovliev.World-Dev-Event";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.world-dev-event";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -380,57 +553,74 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PU97M7F5F;
-				INFOPLIST_FILE = "World Dev Event/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/World Dev Event/Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vadim.yakovliev.World-Dev-Event";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.world-dev-event";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		FD80714822A24901004837A1 /* Debug */ = {
+		FD80716B22A24F36004837A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4PU97M7F5F;
-				INFOPLIST_FILE = "World Dev EventTests/Info.plist";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Networking/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vadim.yakovliev.World-Dev-EventTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vadim.yakovliev.Networking;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/World Dev Event.app/World Dev Event";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		FD80714922A24901004837A1 /* Release */ = {
+		FD80716C22A24F36004837A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4PU97M7F5F;
-				INFOPLIST_FILE = "World Dev EventTests/Info.plist";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Networking/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vadim.yakovliev.World-Dev-EventTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vadim.yakovliev.Networking;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/World Dev Event.app/World Dev Event";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -455,11 +645,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FD80714722A24901004837A1 /* Build configuration list for PBXNativeTarget "World Dev EventTests" */ = {
+		FD80716A22A24F36004837A1 /* Build configuration list for PBXNativeTarget "Networking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FD80714822A24901004837A1 /* Debug */,
-				FD80714922A24901004837A1 /* Release */,
+				FD80716B22A24F36004837A1 /* Debug */,
+				FD80716C22A24F36004837A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
