@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - Activity -> Event or Shop
 
-struct Activity: Equatable {
+struct SimpleActivity: Equatable {
     let id: Int
     let type: ActivityType
     
@@ -25,7 +25,7 @@ struct Activity: Equatable {
     }
 }
 
-extension Activity: Decodable {
+extension SimpleActivity: Decodable {
     enum CodingKeys: String, CodingKey {
         case id, type, title, shortDescription
         

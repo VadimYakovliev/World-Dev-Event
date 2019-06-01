@@ -25,8 +25,8 @@ public protocol NetworkingContract {
 }
 
 public final class Networking {
-    var urlSession: URLSessionContract
-    var dataTask: DataTask?
+    private var urlSession: URLSessionContract
+    private var dataTask: DataTask?
     
     public init(urlSession: URLSessionContract = URLSessionInterlayer()) {
         self.urlSession = urlSession

@@ -37,9 +37,10 @@
 		FD8071AB22A2760D004837A1 /* URLSessionInterlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071AA22A2760D004837A1 /* URLSessionInterlayer.swift */; };
 		FD8071AE22A27E60004837A1 /* SessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071AD22A27E60004837A1 /* SessionState.swift */; };
 		FD8071B122A2811C004837A1 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071AF22A27FF6004837A1 /* NetworkErrors.swift */; };
-		FD8071B322A2865E004837A1 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071B222A2865E004837A1 /* Activity.swift */; };
+		FD8071B322A2865E004837A1 /* SimpleActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071B222A2865E004837A1 /* SimpleActivity.swift */; };
 		FD8071B622A28961004837A1 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071B522A28961004837A1 /* Coordinates.swift */; };
 		FD8071B822A28C29004837A1 /* Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071B722A28C29004837A1 /* Handler.swift */; };
+		FD8071BA22A2A513004837A1 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071B922A2A513004837A1 /* Activity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,9 +100,10 @@
 		FD8071AA22A2760D004837A1 /* URLSessionInterlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionInterlayer.swift; sourceTree = "<group>"; };
 		FD8071AD22A27E60004837A1 /* SessionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionState.swift; sourceTree = "<group>"; };
 		FD8071AF22A27FF6004837A1 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
-		FD8071B222A2865E004837A1 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		FD8071B222A2865E004837A1 /* SimpleActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleActivity.swift; sourceTree = "<group>"; };
 		FD8071B522A28961004837A1 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		FD8071B722A28C29004837A1 /* Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handler.swift; sourceTree = "<group>"; };
+		FD8071B922A2A513004837A1 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +148,7 @@
 			children = (
 				FD80712A22A24900004837A1 /* AppDelegate.swift */,
 				FD80717222A25125004837A1 /* Modules */,
-				FD8071B422A28668004837A1 /* DataModels */,
+				FD8071B422A28668004837A1 /* Models */,
 				FD80718422A25F11004837A1 /* Services */,
 				FD80717122A25105004837A1 /* Common */,
 				FD80714A22A24A06004837A1 /* Resources */,
@@ -299,13 +301,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		FD8071B422A28668004837A1 /* DataModels */ = {
+		FD8071B422A28668004837A1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FD8071B222A2865E004837A1 /* Activity.swift */,
+				FD8071B222A2865E004837A1 /* SimpleActivity.swift */,
+				FD8071B922A2A513004837A1 /* Activity.swift */,
 				FD8071B522A28961004837A1 /* Coordinates.swift */,
 			);
-			path = DataModels;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,7 +434,8 @@
 				FD80717922A257BD004837A1 /* DetailsViewController.swift in Sources */,
 				FD8071B822A28C29004837A1 /* Handler.swift in Sources */,
 				FD80717E22A25E3E004837A1 /* DispatchQueue.swift in Sources */,
-				FD8071B322A2865E004837A1 /* Activity.swift in Sources */,
+				FD8071B322A2865E004837A1 /* SimpleActivity.swift in Sources */,
+				FD8071BA22A2A513004837A1 /* Activity.swift in Sources */,
 				FD80718722A2608E004837A1 /* ImageDataProvider.swift in Sources */,
 				FD80718322A25EF7004837A1 /* ActivitiesNetworking.swift in Sources */,
 				FD80717C22A257F4004837A1 /* DetailsPresenter.swift in Sources */,

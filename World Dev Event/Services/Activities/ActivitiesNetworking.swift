@@ -9,7 +9,7 @@
 import Networking
 
 protocol ActivitiesNetworkingContract {
-    func receiveData(_ handler: @escaping Handler<[Activity]>)
+    func receiveData(_ handler: @escaping Handler<[SimpleActivity]>)
 }
 
 final class ActivitiesNetworking {
@@ -21,7 +21,7 @@ final class ActivitiesNetworking {
 }
 
 extension ActivitiesNetworking: ActivitiesNetworkingContract {
-    func receiveData(_ handler: @escaping Handler<[Activity]>) {
+    func receiveData(_ handler: @escaping Handler<[SimpleActivity]>) {
         self.networking.execute(type: .GET,
                                 urlString: API.activities,
                                 authorizationType: .none,
@@ -38,9 +38,9 @@ extension ActivitiesNetworking: ActivitiesNetworkingContract {
 }
 
 private extension ActivitiesNetworking {
-    func handle(data: Data?, handler: Handler<[Activity]>) {
+    func handle(data: Data?, handler: Handler<[SimpleActivity]>) {
         guard
-            let activities: [Activity] = data?.decoded()
+            let activities: [SimpleActivity] = data?.decoded()
             else { handler(.failure(NetworkErrors.undefined)); return }
         
         handler(.success(activities))
