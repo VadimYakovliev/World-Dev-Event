@@ -12,7 +12,7 @@ protocol ActivitiesPresenterContract {
     
 }
 
-class ActivitiesPresenter {
+final class ActivitiesPresenter {
     
 }
 

@@ -12,7 +12,7 @@ protocol MapPresenterContract {
     
 }
 
-class MapPresenter {
+final class MapPresenter {
     
 }
 

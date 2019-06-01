@@ -12,7 +12,7 @@ protocol DetailsPresenterContract {
     
 }
 
-class DetailsPresenter {
+final class DetailsPresenter {
     
 }
 

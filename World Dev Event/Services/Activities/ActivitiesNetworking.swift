@@ -6,4 +6,20 @@
 //  Copyright © 2019 Vadim Yakovliev. All rights reserved.
 //
 
-import Foundation
+import Networking
+
+protocol ActivitiesNetworkingContract {
+    
+}
+
+final class ActivitiesNetworking {
+    private let networking: NetworkingContract
+    
+    init(networking: NetworkingContract) {
+        self.networking = networking
+    }
+}
+
+extension ActivitiesNetworking: ActivitiesNetworkingContract {
+    
+}
