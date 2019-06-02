@@ -20,7 +20,7 @@ enum Titles {
         static let retry = "Retry"
         static let cancel = "Cancel"
         
-        static let showMap = "Show on map"
+        static let showMap = "Show on map".uppercased()
     }
     
     enum Screens {
@@ -28,8 +28,8 @@ enum Titles {
     }
     
     enum Tabs {
-        static let events = "Events"
-        static let shops = "Shops"
+        static let events = "Events".uppercased()
+        static let shops = "Shops".uppercased()
     }
 }
 

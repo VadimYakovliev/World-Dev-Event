@@ -44,8 +44,10 @@ enum ScenesFactory {
     private static func makeDetailsScene(parameters: DetailsSceneParameters) -> UIViewController {
         let view = DetailsViewController()
         
-        let presenter = DetailsPresenter(view: view)
+        let presenter = DetailsPresenter(view: view, presentationModel: parameters.presentationModel)
         view.bind(presenter: presenter)
+        
+        presenter.onButtonPressedListener = parameters.selectListener
         
         return view
     }

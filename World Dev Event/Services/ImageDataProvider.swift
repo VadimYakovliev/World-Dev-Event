@@ -6,8 +6,22 @@
 //  Copyright © 2019 Vadim Yakovliev. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import Kingfisher
 
-final class ImageDataProvider {
+private let transitionFade: TimeInterval = 0.4
+private let imagePlaceholder = "no_image"
+
+extension UIImageView {
+    func loadIndicator(isActive: Bool) {
+        self.kf.indicatorType = isActive ? .activity : .none
+    }
     
+    func setImage(withUrl url: URL?) {
+        self.kf.setImage(with: url,
+                         placeholder: url == nil ? UIImage(named: imagePlaceholder) : nil,
+                         options: [.transition(.fade(transitionFade)),
+                                   .scaleFactor(UIScreen.main.scale),
+                                   .backgroundDecode])
+    }
 }

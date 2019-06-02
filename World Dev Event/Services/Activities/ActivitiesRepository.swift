@@ -12,6 +12,7 @@ typealias ActivityType = SimpleActivity.ActivityType
 
 protocol ActivitiesRepositoryContract {
     func getActivities(byType type: ActivityType, handler: @escaping Handler<[Activity]>)
+    func getActivity(byIndex index: Int, type: ActivityType) -> Activity
 }
 
 final class ActivitiesRepository {
@@ -40,6 +41,15 @@ extension ActivitiesRepository: ActivitiesRepositoryContract {
             case .failure(let error):
                 handler(.failure(error))
             }
+        }
+    }
+    
+    func getActivity(byIndex index: Int, type: ActivityType) -> Activity {
+        switch type {
+        case .event:
+            return self.events[index]
+        case .shop:
+            return self.shops[index]
         }
     }
 }
