@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD78EDBB22A38C340062D2FA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDBA22A38C340062D2FA /* UIView+Extensions.swift */; };
 		FD80712B22A24900004837A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80712A22A24900004837A1 /* AppDelegate.swift */; };
 		FD80712D22A24900004837A1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80712C22A24900004837A1 /* BaseViewController.swift */; };
 		FD80713222A24901004837A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD80713122A24901004837A1 /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FD78EDBA22A38C340062D2FA /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		FD80712722A24900004837A1 /* World Dev Event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Dev Event.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD80712A22A24900004837A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD80712C22A24900004837A1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				FD80719C22A2688F004837A1 /* UIColor+Extensions.swift */,
 				FD8071BB22A2AFA9004837A1 /* UIViewController+Extensions.swift */,
 				FD8071CC22A2D34C004837A1 /* Error+Extensions.swift */,
+				FD78EDBA22A38C340062D2FA /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				FD8071B322A2865E004837A1 /* SimpleActivity.swift in Sources */,
 				FD8071BA22A2A513004837A1 /* Activity.swift in Sources */,
 				FD80718722A2608E004837A1 /* ImageDataProvider.swift in Sources */,
+				FD78EDBB22A38C340062D2FA /* UIView+Extensions.swift in Sources */,
 				FD80718322A25EF7004837A1 /* ActivitiesNetworking.swift in Sources */,
 				FD8071BC22A2AFA9004837A1 /* UIViewController+Extensions.swift in Sources */,
 				FD8071C822A2BC8A004837A1 /* BasePresenter.swift in Sources */,
