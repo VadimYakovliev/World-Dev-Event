@@ -24,6 +24,8 @@ final class MapPresenter {
 
 extension MapPresenter: MapPresenterContract {
     func onViewDidLoad() {
-        self.view.update(presentationModel: self.activity)
+        let mapPresentationModel = MapPresentationModel(activityTitle: self.activity.title,
+                                                        coordinates: self.activity.details.coordinates)
+        self.view.update(presentationModel: mapPresentationModel)
     }
 }
