@@ -45,15 +45,19 @@ extension DefaultAlert where Self: UIViewController {
                    cancelButtonTitle: String?,
                    completion: ((BaseViewController.AlertAction) -> Void)?) {
         onMainQueue {
-            self.showAlert(message: text,
-                           defaultButtonTitle: defaultButtonTitle,
-                           cancelButtonTitle: cancelButtonTitle) { defaultPressed in
-                            
-                            let action: BaseViewController.AlertAction = defaultPressed
-                                ? .defaultPressed
-                                : .cancelPressed
-                            completion?(action)
+            let alertController = UIAlertController(title: text, message: nil, preferredStyle: .alert)
+            
+            alertController.addAction(UIAlertAction(title: defaultButtonTitle, style: .default)  { _ in
+                completion?(.defaultPressed)
+            })
+            
+            if cancelButtonTitle != nil {
+                alertController.addAction(UIAlertAction(title: cancelButtonTitle, style: .cancel) { _ in
+                    completion?(.cancelPressed)
+                })
             }
+            
+            self.present(alertController, animated: true)
         }
     }
 }

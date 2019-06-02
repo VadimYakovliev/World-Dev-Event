@@ -12,7 +12,7 @@ import MapKit
 private let regionRadius: CLLocationDistance = 3000
 
 protocol MapViewContract: AnyObject {
-    func update(presentationModel: Activity)
+    func update(presentationModel: MapPresentationModel)
 }
 
 final class MapViewController: BaseViewController {
@@ -27,12 +27,28 @@ final class MapViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.add(self.mapView)
+        self.mapView.equalSizeToSuperview()
         self.presenter.onViewDidLoad()
     }
 }
 
 extension MapViewController: MapViewContract {
-    func update(presentationModel: Activity) {
-        
+    func update(presentationModel: MapPresentationModel) {
+        onMainQueue {
+            let coordinates = presentationModel.activityCoordinates
+            let location = CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
+            self.configureMap(location: location)
+            self.mapView.addAnnotation(presentationModel)
+        }
+    }
+}
+
+private extension MapViewController {
+    func configureMap(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
+                                                  latitudinalMeters: regionRadius,
+                                                  longitudinalMeters: regionRadius)
+        self.mapView.setRegion(coordinateRegion, animated: true)
     }
 }

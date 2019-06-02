@@ -23,6 +23,7 @@
 		FD78EDD722A4090B0062D2FA /* FullImageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDD622A4090B0062D2FA /* FullImageTableCell.swift */; };
 		FD78EDD922A40C5F0062D2FA /* DetailsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDD822A40C5F0062D2FA /* DetailsTableCell.swift */; };
 		FD78EDDB22A4154E0062D2FA /* LabelsStackConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDDA22A4154E0062D2FA /* LabelsStackConfigurator.swift */; };
+		FD78EDDD22A434670062D2FA /* MapPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDDC22A434670062D2FA /* MapPresentationModel.swift */; };
 		FD80712B22A24900004837A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80712A22A24900004837A1 /* AppDelegate.swift */; };
 		FD80712D22A24900004837A1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80712C22A24900004837A1 /* BaseViewController.swift */; };
 		FD80713222A24901004837A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD80713122A24901004837A1 /* Assets.xcassets */; };
@@ -57,7 +58,6 @@
 		FD8071B622A28961004837A1 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071B522A28961004837A1 /* Coordinates.swift */; };
 		FD8071B822A28C29004837A1 /* Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071B722A28C29004837A1 /* Handler.swift */; };
 		FD8071BA22A2A513004837A1 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071B922A2A513004837A1 /* Activity.swift */; };
-		FD8071BC22A2AFA9004837A1 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071BB22A2AFA9004837A1 /* UIViewController+Extensions.swift */; };
 		FD8071C022A2B219004837A1 /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071BF22A2B219004837A1 /* AppConfigurator.swift */; };
 		FD8071C222A2B2B0004837A1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071C122A2B2B0004837A1 /* Coordinator.swift */; };
 		FD8071C422A2B368004837A1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8071C322A2B368004837A1 /* AppCoordinator.swift */; };
@@ -112,6 +112,7 @@
 		FD78EDD622A4090B0062D2FA /* FullImageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullImageTableCell.swift; sourceTree = "<group>"; };
 		FD78EDD822A40C5F0062D2FA /* DetailsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableCell.swift; sourceTree = "<group>"; };
 		FD78EDDA22A4154E0062D2FA /* LabelsStackConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsStackConfigurator.swift; sourceTree = "<group>"; };
+		FD78EDDC22A434670062D2FA /* MapPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresentationModel.swift; sourceTree = "<group>"; };
 		FD80712722A24900004837A1 /* World Dev Event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Dev Event.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD80712A22A24900004837A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD80712C22A24900004837A1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +149,6 @@
 		FD8071B522A28961004837A1 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		FD8071B722A28C29004837A1 /* Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handler.swift; sourceTree = "<group>"; };
 		FD8071B922A2A513004837A1 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		FD8071BB22A2AFA9004837A1 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		FD8071BF22A2B219004837A1 /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		FD8071C122A2B2B0004837A1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FD8071C322A2B368004837A1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -382,6 +382,7 @@
 			children = (
 				FD80718822A2637C004837A1 /* MapViewController.swift */,
 				FD80718B22A263CE004837A1 /* MapPresenter.swift */,
+				FD78EDDC22A434670062D2FA /* MapPresentationModel.swift */,
 			);
 			path = MapScene;
 			sourceTree = "<group>";
@@ -398,7 +399,6 @@
 		FD80719E22A268BB004837A1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FD8071BB22A2AFA9004837A1 /* UIViewController+Extensions.swift */,
 				FD78EDBA22A38C340062D2FA /* UIView+Extensions.swift */,
 				FD78EDCF22A3CD3E0062D2FA /* CALayer+Extensions.swift */,
 				FD80719C22A2688F004837A1 /* UIColor+Extensions.swift */,
@@ -661,11 +661,11 @@
 				FD78EDBB22A38C340062D2FA /* UIView+Extensions.swift in Sources */,
 				FD80718322A25EF7004837A1 /* ActivitiesNetworking.swift in Sources */,
 				FD78EDCD22A3B9060062D2FA /* SegmentedTabsView.swift in Sources */,
-				FD8071BC22A2AFA9004837A1 /* UIViewController+Extensions.swift in Sources */,
 				FD8071C822A2BC8A004837A1 /* BasePresenter.swift in Sources */,
 				FD78EDBF22A39EC80062D2FA /* CellConfigurator.swift in Sources */,
 				FD78EDD722A4090B0062D2FA /* FullImageTableCell.swift in Sources */,
 				FD80717C22A257F4004837A1 /* DetailsPresenter.swift in Sources */,
+				FD78EDDD22A434670062D2FA /* MapPresentationModel.swift in Sources */,
 				FD78EDC322A3A11A0062D2FA /* TableViewAdapter.swift in Sources */,
 				FD78EDDB22A4154E0062D2FA /* LabelsStackConfigurator.swift in Sources */,
 				FD78EDC822A3A8570062D2FA /* ActivityTableCell.swift in Sources */,

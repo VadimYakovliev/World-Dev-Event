@@ -43,7 +43,8 @@ final class Activity {
         init(fullImageURL: String, fullDescription: String, latitude: String, longitude: String) {
             self.description = fullDescription
             self.imageURL = URL(string: fullImageURL)
-            self.coordinates = Coordinates(latitude: latitude, longitude: longitude)
+            self.coordinates = Coordinates(latitude: Double(latitude) ?? .zero,
+                                           longitude: Double(longitude) ?? .zero)
         }
     }
 }
