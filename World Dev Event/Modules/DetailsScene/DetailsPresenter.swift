@@ -9,14 +9,14 @@
 import Foundation
 
 protocol DetailsPresenterContract: BasePresenterContract {
-    func onShowMapDidPressed(withCoordinates coordinates: Coordinates)
+    func onShowMapDidPressed(withActivity activity: Activity)
 }
 
 final class DetailsPresenter {
     unowned var view: DetailsViewContract
     let presentationModel: Activity
     
-    var onButtonPressedListener: ((Coordinates) -> Void)?
+    var onButtonPressedListener: ((Activity) -> Void)?
     
     init(view: DetailsViewContract, presentationModel: Activity) {
         self.view = view
@@ -29,7 +29,7 @@ extension DetailsPresenter: DetailsPresenterContract {
         self.view.update(withModel: DetailsTableViewModel(activity: self.presentationModel))
     }
     
-    func onShowMapDidPressed(withCoordinates coordinates: Coordinates) {
-        self.onButtonPressedListener?(coordinates)
+    func onShowMapDidPressed(withActivity activity: Activity) {
+        self.onButtonPressedListener?(activity)
     }
 }

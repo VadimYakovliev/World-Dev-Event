@@ -10,12 +10,12 @@ import UIKit
 
 enum ScenesFactory {
     typealias ActivitiesSceneParameters = (repository: ActivitiesRepositoryContract, selectListener: ((Activity) -> Void)?)
-    typealias DetailsSceneParameters = (presentationModel: Activity, selectListener: ((Coordinates) -> Void)?)
+    typealias DetailsSceneParameters = (presentationModel: Activity, selectListener: ((Activity) -> Void)?)
     
     enum SceneType {
         case activities(ActivitiesSceneParameters)
         case details(DetailsSceneParameters)
-        case map(Coordinates)
+        case map(Activity)
     }
     
     static func make(type: SceneType) -> UIViewController {
@@ -24,8 +24,8 @@ enum ScenesFactory {
             return self.makeActivitiesScene(parameters: parameters)
         case .details(let parameters):
             return self.makeDetailsScene(parameters: parameters)
-        case .map(let coordinates):
-            return self.makeMapScene(coordinates: coordinates)
+        case .map(let activity):
+            return self.makeMapScene(activity: activity)
         }
     }
     
@@ -52,10 +52,10 @@ enum ScenesFactory {
         return view
     }
     
-    private static func makeMapScene(coordinates: Coordinates) -> UIViewController {
+    private static func makeMapScene(activity: Activity) -> UIViewController {
         let view = MapViewController()
         
-        let presenter = MapPresenter(view: view)
+        let presenter = MapPresenter(view: view, activity: activity)
         view.bind(presenter: presenter)
         
         return view

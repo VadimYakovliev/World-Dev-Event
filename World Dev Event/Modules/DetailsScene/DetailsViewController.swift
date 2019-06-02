@@ -64,8 +64,8 @@ private extension DetailsViewController {
     }
     
     func listenShowMapButtonDidPressed() {
-        let onShowMapButtonPressed: ((Coordinates) -> Void)? = { [weak self] coordinates in
-            self?.presenter.onShowMapDidPressed(withCoordinates: coordinates)
+        let onShowMapButtonPressed: ((Activity) -> Void)? = { [weak self] activity in
+            self?.presenter.onShowMapDidPressed(withActivity: activity)
         }
         
         self.tableView.getVisibleCells(DetailsTableCell.self)

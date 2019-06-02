@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import MapKit
+
+private let regionRadius: CLLocationDistance = 3000
 
 protocol MapViewContract: AnyObject {
-    
+    func update(presentationModel: Activity)
 }
 
 final class MapViewController: BaseViewController {
     var presenter: MapPresenterContract!
+    
+    private let mapView = MKMapView()
     
     func bind(presenter: MapPresenterContract) {
         self.presenter = presenter
@@ -27,5 +32,7 @@ final class MapViewController: BaseViewController {
 }
 
 extension MapViewController: MapViewContract {
-    
+    func update(presentationModel: Activity) {
+        
+    }
 }

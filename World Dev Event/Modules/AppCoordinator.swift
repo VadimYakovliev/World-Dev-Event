@@ -37,15 +37,15 @@ private extension AppCoordinator {
     }
     
     func showDetailsScene(presentationModel: Activity) {
-        let onButtonPressedListener: ((Coordinates) -> Void)? = { [weak self] coordinates in
-            self?.showMapScene(coordinates: coordinates)
+        let onButtonPressedListener: ((Activity) -> Void)? = { [weak self] activity in
+            self?.showMapScene(activity: activity)
         }
         
         let parameters: ScenesFactory.DetailsSceneParameters = (presentationModel, onButtonPressedListener)
         self.push(view: ScenesFactory.make(type: .details(parameters)))
     }
     
-    func showMapScene(coordinates: Coordinates) {
-        self.push(view: ScenesFactory.make(type: .map(coordinates)))
+    func showMapScene(activity: Activity) {
+        self.push(view: ScenesFactory.make(type: .map(activity)))
     }
 }

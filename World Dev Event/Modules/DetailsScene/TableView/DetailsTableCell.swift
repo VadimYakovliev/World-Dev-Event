@@ -19,7 +19,7 @@ private let buttonHeight: CGFloat = 50.0
 
 class DetailsTableCell: UITableViewCell {
     
-    var onShowMapButtonPressed: ((Coordinates) -> Void)?
+    var onShowMapButtonPressed: ((Activity) -> Void)?
     
     private let stackView = UIStackView()
     private let button = UIButton(type: .system)
@@ -105,6 +105,6 @@ private extension DetailsTableCell {
     }
     
     @objc func buttonPressed() {
-        self.presentationModel.map { self.onShowMapButtonPressed?($0.details.coordinates) }
+        self.presentationModel.map { self.onShowMapButtonPressed?($0) }
     }
 }

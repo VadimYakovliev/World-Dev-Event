@@ -14,14 +14,16 @@ protocol MapPresenterContract: BasePresenterContract {
 
 final class MapPresenter {
     unowned var view: MapViewContract
+    private let activity: Activity
     
-    init(view: MapViewContract) {
+    init(view: MapViewContract, activity: Activity) {
         self.view = view
+        self.activity = activity
     }
 }
 
 extension MapPresenter: MapPresenterContract {
     func onViewDidLoad() {
-        
+        self.view.update(presentationModel: self.activity)
     }
 }
