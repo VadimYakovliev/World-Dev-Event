@@ -35,6 +35,8 @@ extension DetailsViewController: DetailsViewContract {
         onMainQueue {
             self.tableViewAdapter.set(tableViewModel: tableViewModel)
             self.tableView.reloadData()
+            
+            self.listenShowMapButtonDidPressed()
         }
     }
 }
@@ -59,5 +61,14 @@ private extension DetailsViewController {
         
         self.view.add(self.tableView)
         self.tableView.equalSizeToSuperview()
+    }
+    
+    func listenShowMapButtonDidPressed() {
+        let onShowMapButtonPressed: ((Coordinates) -> Void)? = { [weak self] coordinates in
+            self?.presenter.onShowMapDidPressed(withCoordinates: coordinates)
+        }
+        
+        self.tableView.getVisibleCells(DetailsTableCell.self)
+            .forEach { $0.onShowMapButtonPressed = onShowMapButtonPressed }
     }
 }

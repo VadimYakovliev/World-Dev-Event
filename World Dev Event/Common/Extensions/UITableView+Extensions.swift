@@ -14,4 +14,8 @@ extension UITableView {
     func registerCellClass<T: UITableViewCell>(_: T.Type) {
         self.register(T.self, forCellReuseIdentifier: T.identifier)
     }
+    
+    func getVisibleCells<T: UITableViewCell>(_: T.Type) -> [T] {
+        return self.visibleCells.compactMap { $0 as? T }
+    }
 }
