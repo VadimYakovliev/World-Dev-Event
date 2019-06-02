@@ -62,6 +62,7 @@ private extension ActivitiesViewController {
         self.tableView.backgroundColor = .clear
         
         self.tableView.registerCellClass(ActivityTableCell.self)
+        
         self.tableView.separatorStyle = .none
         self.tableView.showsVerticalScrollIndicator = false
         self.tableView.alwaysBounceHorizontal = false
@@ -71,6 +72,8 @@ private extension ActivitiesViewController {
         
         self.tableView.delegate = self.tableViewAdapter
         self.tableView.dataSource = self.tableViewAdapter
+        
+        self.tableView.contentInset = UIEdgeInsets(top: 21.0, left: .zero, bottom: .zero, right: .zero)
     }
     
     func configureSubviews() {

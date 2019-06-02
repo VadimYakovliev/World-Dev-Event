@@ -13,13 +13,8 @@ private let titleFontSize: CGFloat = 20.0
 private let descriptFontSize: CGFloat = 14.0
 private let imageSizeValue: CGFloat = 60.0
 
-private let containerVerticalInset: CGFloat = 10.0
-private let containerHorizontalInset: CGFloat = 24.0
-
-private let containerInsets = UIEdgeInsets(top: containerVerticalInset,
-                                           left: containerHorizontalInset,
-                                           bottom: containerVerticalInset,
-                                           right: containerVerticalInset)
+private let containerInset: CGFloat = 10.0
+private let containerHorizontalInsetRatio: CGFloat = 0.06
 
 class ActivityTableCell: UITableViewCell {
     
@@ -51,15 +46,17 @@ extension ActivityTableCell: Configurable {
     func configure(presentationModel: Activity) {
         self.presentationModel = presentationModel
         
-        self.imagePreview.setImage(withUrl: presentationModel.preview.imageURL)
+        self.imagePreview.setImage(withUrl: self.presentationModel?.preview.imageURL)
         
-        self.titleLabel.text = presentationModel.title
-        self.descriptionLabel.text = presentationModel.preview.description
+        self.updateLabelsContent()
     }
 }
 
 private extension ActivityTableCell {
     func configureCell() {
+        self.selectionStyle = .none
+        self.backgroundColor = .clear
+        
         self.configureContainerView()
         self.configureImagePreview()
         self.configureLabelsWithStack()
@@ -67,6 +64,12 @@ private extension ActivityTableCell {
     
     func configureContainerView() {
         self.contentView.add(self.containerView)
+        
+        let leftInset = self.contentView.bounds.width * containerHorizontalInsetRatio
+        let containerInsets = UIEdgeInsets(top: containerInset,
+                                           left: leftInset,
+                                           bottom: containerInset,
+                                           right: containerInset)
         
         self.containerView.snp.makeConstraints { make in
             make.edges.equalTo(self.contentView).inset(containerInsets)
@@ -103,7 +106,10 @@ private extension ActivityTableCell {
         stackView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.left.equalTo(self.imagePreview.snp.right).offset(titleFontSize)
+            make.right.equalToSuperview()
         }
+        
+        self.updateLabelsContent()
     }
     
     func configureLabel(withTextColor color: UIColor, size: CGFloat) -> UILabel {
@@ -116,5 +122,10 @@ private extension ActivityTableCell {
         label.font = Fonts.roboto(type: .regular, size: size)
         
         return label
+    }
+    
+    func updateLabelsContent() {
+        self.titleLabel.text = self.presentationModel?.title
+        self.descriptionLabel.text = self.presentationModel?.preview.description
     }
 }
