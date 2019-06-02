@@ -15,6 +15,7 @@
 		FD78EDC522A3A2A80062D2FA /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDC422A3A2A80062D2FA /* Collection+Extensions.swift */; };
 		FD78EDC822A3A8570062D2FA /* ActivityTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDC722A3A8570062D2FA /* ActivityTableCell.swift */; };
 		FD78EDCA22A3ADBF0062D2FA /* ActivitiesTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDC922A3ADBF0062D2FA /* ActivitiesTableViewModel.swift */; };
+		FD78EDCD22A3B9060062D2FA /* SegmentedTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDCC22A3B9060062D2FA /* SegmentedTabsView.swift */; };
 		FD80712B22A24900004837A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80712A22A24900004837A1 /* AppDelegate.swift */; };
 		FD80712D22A24900004837A1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80712C22A24900004837A1 /* BaseViewController.swift */; };
 		FD80713222A24901004837A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD80713122A24901004837A1 /* Assets.xcassets */; };
@@ -92,6 +93,7 @@
 		FD78EDC422A3A2A80062D2FA /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		FD78EDC722A3A8570062D2FA /* ActivityTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableCell.swift; sourceTree = "<group>"; };
 		FD78EDC922A3ADBF0062D2FA /* ActivitiesTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewModel.swift; sourceTree = "<group>"; };
+		FD78EDCC22A3B9060062D2FA /* SegmentedTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedTabsView.swift; sourceTree = "<group>"; };
 		FD80712722A24900004837A1 /* World Dev Event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Dev Event.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD80712A22A24900004837A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD80712C22A24900004837A1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 			children = (
 				FD80717322A255C0004837A1 /* ActivitiesViewController.swift */,
 				FD80717522A255DD004837A1 /* ActivitiesPresenter.swift */,
+				FD78EDCC22A3B9060062D2FA /* SegmentedTabsView.swift */,
 				FD78EDCB22A3AE7C0062D2FA /* TableView */,
 			);
 			path = MainScene;
@@ -517,6 +520,7 @@
 				FD80718722A2608E004837A1 /* ImageDataProvider.swift in Sources */,
 				FD78EDBB22A38C340062D2FA /* UIView+Extensions.swift in Sources */,
 				FD80718322A25EF7004837A1 /* ActivitiesNetworking.swift in Sources */,
+				FD78EDCD22A3B9060062D2FA /* SegmentedTabsView.swift in Sources */,
 				FD8071BC22A2AFA9004837A1 /* UIViewController+Extensions.swift in Sources */,
 				FD8071C822A2BC8A004837A1 /* BasePresenter.swift in Sources */,
 				FD78EDBF22A39EC80062D2FA /* CellConfigurator.swift in Sources */,

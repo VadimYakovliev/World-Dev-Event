@@ -44,4 +44,10 @@ extension UIView {
             self.heightAnchor.constraint(equalToConstant: size.height).isActive = true
         }
     }
+    
+    // MARK: - Add array of subviews
+    
+    func add(_ subviews: UIView...) {
+        subviews.forEach(self.addSubview)
+    }
 }
