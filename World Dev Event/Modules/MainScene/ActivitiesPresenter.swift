@@ -10,7 +10,7 @@ import Foundation
 
 protocol ActivitiesPresenterContract: BasePresenterContract {
     func switchState(index: Int)
-    func activityDidSelect(handler: ((Activity) -> Void)?)
+    func onDidSelectCell(index: Int)
 }
 
 final class ActivitiesPresenter {
@@ -40,8 +40,9 @@ extension ActivitiesPresenter: ActivitiesPresenterContract {
         self.sceneState = (index == .zero) ? .event : .shop
     }
     
-    func activityDidSelect(handler: ((Activity) -> Void)?) {
-        self.onActivitySelectListener = handler
+    func onDidSelectCell(index: Int) {
+        let activity = self.repository.getActivity(byIndex: index, type: self.sceneState)
+        self.onActivitySelectListener?(activity)
     }
 }
 
@@ -64,7 +65,8 @@ private extension ActivitiesPresenter {
             self.repository.getActivities(byType: self.sceneState) { [weak self] result in
                 switch result {
                 case .success(let activities):
-                    self?.view.update(activities: activities)
+                    let tableViewModel = ActivitiesTableViewModel(activities: activities)
+                    self?.view.update(withModel: tableViewModel)
                 case .failure(let error):
                     self?.alert(text: error.description)
                 }
