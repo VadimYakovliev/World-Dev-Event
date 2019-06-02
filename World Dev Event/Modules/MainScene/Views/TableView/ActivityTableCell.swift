@@ -89,17 +89,14 @@ private extension ActivityTableCell {
     }
     
     func configureLabelsWithStack() {
-        self.titleLabel = self.configureLabel(withTextColor: Colors.orange, size: titleFontSize)
-        self.descriptionLabel = self.configureLabel(withTextColor: Colors.redBrown, size: descriptFontSize)
+        let labelsStack = LabelsStackConfigurator.getStack(fontFamily: .regular,
+                                                           titleFontSize: titleFontSize,
+                                                           descriptFontSize: descriptFontSize)
         
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.distribution = .fillProportionally
-        stackView.alignment = .fill
-        stackView.spacing = 4.0
+        self.titleLabel = labelsStack.titleLabel
+        self.descriptionLabel = labelsStack.descriptionLabel
         
-        stackView.addArrangedSubview(self.titleLabel)
-        stackView.addArrangedSubview(self.descriptionLabel)
+        let stackView = labelsStack.stack
         
         self.containerView.add(stackView)
         
@@ -110,18 +107,6 @@ private extension ActivityTableCell {
         }
         
         self.updateLabelsContent()
-    }
-    
-    func configureLabel(withTextColor color: UIColor, size: CGFloat) -> UILabel {
-        let label = UILabel()
-        label.textAlignment = .left
-        label.lineBreakMode = .byTruncatingTail
-        label.numberOfLines = 1
-        
-        label.textColor = color
-        label.font = Fonts.roboto(type: .regular, size: size)
-        
-        return label
     }
     
     func updateLabelsContent() {

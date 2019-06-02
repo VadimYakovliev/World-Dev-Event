@@ -8,6 +8,7 @@
 
 import UIKit
 
+private let viewHeight: CGFloat = 48
 private let cellEstimatedHeight: CGFloat = 80.0
 
 protocol ActivitiesViewContract: AnyObject {
@@ -43,7 +44,6 @@ extension ActivitiesViewController: ActivitiesViewContract {
     func update(withModel tableViewModel: ActivitiesTableViewModel) {
         onMainQueue {
             self.tableViewAdapter.set(tableViewModel: tableViewModel)
-            
             self.tableView.reloadData()
         }
     }
@@ -87,6 +87,7 @@ private extension ActivitiesViewController {
         self.segmentedTabsView.snp.makeConstraints { make in
             make.top.equalTo(self.view.snp.top)
             make.left.right.equalToSuperview()
+            make.height.equalTo(viewHeight)
         }
         
         self.tableView.snp.makeConstraints { make in

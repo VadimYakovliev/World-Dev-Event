@@ -10,7 +10,6 @@ import UIKit
 import SnapKit
 
 private let bottomBarHeight: CGFloat = 2
-private let viewHeight: CGFloat = 48
 private let fontSize: CGFloat = 14.0
 private let textAlpha: CGFloat = 0.5
 private let textColor = UIColor.white
@@ -55,14 +54,6 @@ class SegmentedTabsView: UIView {
         self.configure()
         self.add(self.segmentedControl, self.bottomBarView)
         self.describeSubviewsLayout()
-    }
-    
-    override func didMoveToSuperview() {
-        super.didMoveToSuperview()
-
-        self.snp.makeConstraints { make in
-            make.height.equalTo(viewHeight)
-        }
     }
 }
 

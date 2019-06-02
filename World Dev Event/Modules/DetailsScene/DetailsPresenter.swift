@@ -14,14 +14,18 @@ protocol DetailsPresenterContract: BasePresenterContract {
 
 final class DetailsPresenter {
     unowned var view: DetailsViewContract
+    let presentationModel: Activity
     
-    init(view: DetailsViewContract) {
+    var onButtonPressedListener: ((Coordinates) -> Void)?
+    
+    init(view: DetailsViewContract, presentationModel: Activity) {
         self.view = view
+        self.presentationModel = presentationModel
     }
 }
 
 extension DetailsPresenter: DetailsPresenterContract {
     func onViewDidLoad() {
-        
+        self.view.update(withModel: DetailsTableViewModel(activity: self.presentationModel))
     }
 }

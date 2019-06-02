@@ -11,6 +11,7 @@ import UIKit
 enum Colors {
     static let orange = UIColor(red: 240, green: 82, blue: 35) // #f05223
     static let redBrown = UIColor(red: 118, green: 34, blue: 20) // #762214
+    static let greenLeaf = UIColor(red: 122, green: 181, blue: 57) // #7ab539
 }
 
 enum Fonts {

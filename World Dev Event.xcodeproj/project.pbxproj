@@ -19,6 +19,10 @@
 		FD78EDCA22A3ADBF0062D2FA /* ActivitiesTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDC922A3ADBF0062D2FA /* ActivitiesTableViewModel.swift */; };
 		FD78EDCD22A3B9060062D2FA /* SegmentedTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDCC22A3B9060062D2FA /* SegmentedTabsView.swift */; };
 		FD78EDD022A3CD3E0062D2FA /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDCF22A3CD3E0062D2FA /* CALayer+Extensions.swift */; };
+		FD78EDD422A4087A0062D2FA /* DetailsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDD322A4087A0062D2FA /* DetailsTableViewModel.swift */; };
+		FD78EDD722A4090B0062D2FA /* FullImageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDD622A4090B0062D2FA /* FullImageTableCell.swift */; };
+		FD78EDD922A40C5F0062D2FA /* DetailsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDD822A40C5F0062D2FA /* DetailsTableCell.swift */; };
+		FD78EDDB22A4154E0062D2FA /* LabelsStackConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDDA22A4154E0062D2FA /* LabelsStackConfigurator.swift */; };
 		FD80712B22A24900004837A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80712A22A24900004837A1 /* AppDelegate.swift */; };
 		FD80712D22A24900004837A1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80712C22A24900004837A1 /* BaseViewController.swift */; };
 		FD80713222A24901004837A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD80713122A24901004837A1 /* Assets.xcassets */; };
@@ -104,6 +108,10 @@
 		FD78EDC922A3ADBF0062D2FA /* ActivitiesTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewModel.swift; sourceTree = "<group>"; };
 		FD78EDCC22A3B9060062D2FA /* SegmentedTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedTabsView.swift; sourceTree = "<group>"; };
 		FD78EDCF22A3CD3E0062D2FA /* CALayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extensions.swift"; sourceTree = "<group>"; };
+		FD78EDD322A4087A0062D2FA /* DetailsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewModel.swift; sourceTree = "<group>"; };
+		FD78EDD622A4090B0062D2FA /* FullImageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullImageTableCell.swift; sourceTree = "<group>"; };
+		FD78EDD822A40C5F0062D2FA /* DetailsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableCell.swift; sourceTree = "<group>"; };
+		FD78EDDA22A4154E0062D2FA /* LabelsStackConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsStackConfigurator.swift; sourceTree = "<group>"; };
 		FD80712722A24900004837A1 /* World Dev Event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Dev Event.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD80712A22A24900004837A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD80712C22A24900004837A1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +227,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		FD78EDD522A408E30062D2FA /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				FD78EDD322A4087A0062D2FA /* DetailsTableViewModel.swift */,
+				FD78EDD622A4090B0062D2FA /* FullImageTableCell.swift */,
+				FD78EDD822A40C5F0062D2FA /* DetailsTableCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		FD80711E22A24900004837A1 = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +341,7 @@
 			children = (
 				FD80717822A257BD004837A1 /* DetailsViewController.swift */,
 				FD80717B22A257F4004837A1 /* DetailsPresenter.swift */,
+				FD78EDD522A408E30062D2FA /* TableView */,
 			);
 			path = DetailsScene;
 			sourceTree = "<group>";
@@ -331,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				FD78EDC622A3A7360062D2FA /* TableViewAdapter+Configurator */,
+				FD78EDDA22A4154E0062D2FA /* LabelsStackConfigurator.swift */,
 				FD80717D22A25E3E004837A1 /* DispatchQueue.swift */,
 				FD80718D22A2656F004837A1 /* UIStyles.swift */,
 			);
@@ -620,10 +640,12 @@
 			files = (
 				FD78EDD022A3CD3E0062D2FA /* CALayer+Extensions.swift in Sources */,
 				FD80712D22A24900004837A1 /* BaseViewController.swift in Sources */,
+				FD78EDD422A4087A0062D2FA /* DetailsTableViewModel.swift in Sources */,
 				FD80719D22A2688F004837A1 /* UIColor+Extensions.swift in Sources */,
 				FD8071C022A2B219004837A1 /* AppConfigurator.swift in Sources */,
 				FD80717422A255C0004837A1 /* ActivitiesViewController.swift in Sources */,
 				FD80718C22A263CE004837A1 /* MapPresenter.swift in Sources */,
+				FD78EDD922A40C5F0062D2FA /* DetailsTableCell.swift in Sources */,
 				FD8071B622A28961004837A1 /* Coordinates.swift in Sources */,
 				FD78EDCA22A3ADBF0062D2FA /* ActivitiesTableViewModel.swift in Sources */,
 				FD8071C422A2B368004837A1 /* AppCoordinator.swift in Sources */,
@@ -642,8 +664,10 @@
 				FD8071BC22A2AFA9004837A1 /* UIViewController+Extensions.swift in Sources */,
 				FD8071C822A2BC8A004837A1 /* BasePresenter.swift in Sources */,
 				FD78EDBF22A39EC80062D2FA /* CellConfigurator.swift in Sources */,
+				FD78EDD722A4090B0062D2FA /* FullImageTableCell.swift in Sources */,
 				FD80717C22A257F4004837A1 /* DetailsPresenter.swift in Sources */,
 				FD78EDC322A3A11A0062D2FA /* TableViewAdapter.swift in Sources */,
+				FD78EDDB22A4154E0062D2FA /* LabelsStackConfigurator.swift in Sources */,
 				FD78EDC822A3A8570062D2FA /* ActivityTableCell.swift in Sources */,
 				FD80718922A2637C004837A1 /* MapViewController.swift in Sources */,
 				FD8071CB22A2CFE7004837A1 /* ScenesFactory.swift in Sources */,
