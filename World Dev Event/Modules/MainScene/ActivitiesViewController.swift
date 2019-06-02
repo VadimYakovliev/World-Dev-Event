@@ -8,6 +8,8 @@
 
 import UIKit
 
+private let cellEstimatedHeight: CGFloat = 80.0
+
 protocol ActivitiesViewContract: AnyObject {
     func update(withModel tableViewModel: ActivitiesTableViewModel)
     
@@ -20,6 +22,7 @@ protocol ActivitiesViewContract: AnyObject {
 final class ActivitiesViewController: BaseViewController {
     var presenter: ActivitiesPresenterContract!
     
+    private var segmentedTabsView: SegmentedTabsView!
     private let tableView = UITableView()
     private var tableViewAdapter = TableViewAdapter()
     
@@ -54,12 +57,15 @@ private extension ActivitiesViewController {
         self.tableView.showsVerticalScrollIndicator = false
         self.tableView.alwaysBounceHorizontal = false
         
+        self.tableView.estimatedRowHeight = cellEstimatedHeight
+        self.tableView.rowHeight = UITableView.automaticDimension
+        
         self.tableView.delegate = self.tableViewAdapter
         self.tableView.dataSource = self.tableViewAdapter
         
         self.view.addSubview(self.tableView)
         
-        self.tableView.fillSuperview()
+        self.tableView.equalSizeToSuperview()
     }
     
     func listenDidSelectCell() {

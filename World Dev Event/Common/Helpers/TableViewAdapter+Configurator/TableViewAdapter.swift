@@ -10,23 +10,12 @@ import UIKit
 
 protocol TableViewModel {
     var cellConfigs: [CellConfigurator] { get }
-    
-    var cellHeight: CGFloat? { get }
-    var cellEstimatedHeight: CGFloat? { get }
-    
+
     func pass(cell: UITableViewCell)
 }
 
 extension TableViewModel {
     func pass(cell: UITableViewCell) {}
-    
-    var cellHeight: CGFloat? {
-        return nil
-    }
-    
-    var cellEstimatedHeight: CGFloat? {
-        return nil
-    }
     
     var numberOfRows: Int {
         return self.cellConfigs.count
@@ -73,13 +62,5 @@ extension TableViewAdapter: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         self.onSelectItemAtIndexPathHandler?(indexPath)
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.tableViewModel?.cellHeight ?? UITableView.automaticDimension
-    }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.tableViewModel?.cellEstimatedHeight ?? .zero
     }
 }

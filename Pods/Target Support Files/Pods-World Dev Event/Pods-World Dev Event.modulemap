@@ -1,0 +1,6 @@
+framework module Pods_World_Dev_Event {
+  umbrella header "Pods-World Dev Event-umbrella.h"
+
+  export *
+  module * { export * }
+}

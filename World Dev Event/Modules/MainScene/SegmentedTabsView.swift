@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import SnapKit
 
 private let bottomBarHeight: CGFloat = 2
-private let viewHeight: CGFloat = 42
+private let viewHeight: CGFloat = 48
 private let fontSize: CGFloat = 14.0
 
 class SegmentedTabsView: UIView {
@@ -34,9 +35,8 @@ class SegmentedTabsView: UIView {
     }()
     
     var didSelectItemAtIndexAction: ((Int) -> Void)?
-    private var items = [String]()
     
-    var viewHeight: CGFloat = 48.0
+    private var items = [String]()
     
     convenience init(titles: [String]) {
         self.init()
@@ -47,18 +47,19 @@ class SegmentedTabsView: UIView {
     override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         
-        self.segmentedControl.addTarget(self, action: #selector(self.segmentedItemChanged(_:)), for: .valueChanged)
+        self.segmentedControl.addTarget(self,
+                                        action: #selector(self.segmentedItemChanged(_:)),
+                                        for: .valueChanged)
         self.add(self.segmentedControl, self.bottomBarView)
         self.describeSubviewsLayout()
     }
     
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
-        
-        self.
-//        self.snp.makeConstraints { make in
-//            make.height.equalTo(viewHeight)
-//        }
+
+        self.snp.makeConstraints { make in
+            make.height.equalTo(viewHeight)
+        }
     }
 }
 

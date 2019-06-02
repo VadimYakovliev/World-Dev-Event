@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ActivityTableCell: UITableViewCell {
     
@@ -42,15 +43,9 @@ private extension ActivityTableCell {
         
         self.titleLabel.textColor = Colors.orange
         self.titleLabel.font = Fonts.roboto(type: .regular, size: 20.0)
-        
-        let contentView = self.contentView
-        contentView.addSubview(self.titleLabel)
-        
-        let insets = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
-        self.titleLabel.anchors(top: contentView.topAnchor,
-                                bottom: contentView.bottomAnchor,
-                                leading: contentView.leadingAnchor,
-                                trailing: contentView.trailingAnchor,
-                                insets: insets)
+
+        self.contentView.add(self.titleLabel)
+
+        self.titleLabel.equalSizeToSuperview()
     }
 }

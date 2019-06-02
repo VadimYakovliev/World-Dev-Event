@@ -13,7 +13,6 @@ typealias ActivityTableCellConfig = TableCellConfigurator<ActivityTableCell, Act
 class ActivitiesTableViewModel: TableViewModel {
     
     let cellConfigs: [CellConfigurator]
-    let cellHeight = 80.0
     
     init(activities: [Activity]) {
         self.cellConfigs = activities.map { ActivityTableCellConfig(item: $0) }

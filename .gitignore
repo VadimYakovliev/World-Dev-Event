@@ -14,8 +14,8 @@ xcshareddata
 Manifest.lock
 
 ## Pods
-Pods/*
-World-Dev-Event.xcworkspace/contents.xcworkspacedata
+# Pods/*
+# World-Dev-Event.xcworkspace/contents.xcworkspacedata
 
 ## AppCode
 .idea/
