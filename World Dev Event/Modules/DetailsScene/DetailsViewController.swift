@@ -53,7 +53,6 @@ private extension DetailsViewController {
         
         self.tableView.alwaysBounceHorizontal = false
         self.tableView.bounces = false
-        self.tableView.bouncesZoom = false
         
         self.tableView.rowHeight = UITableView.automaticDimension
 
