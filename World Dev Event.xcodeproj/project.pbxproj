@@ -18,6 +18,7 @@
 		FD78EDC822A3A8570062D2FA /* ActivityTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDC722A3A8570062D2FA /* ActivityTableCell.swift */; };
 		FD78EDCA22A3ADBF0062D2FA /* ActivitiesTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDC922A3ADBF0062D2FA /* ActivitiesTableViewModel.swift */; };
 		FD78EDCD22A3B9060062D2FA /* SegmentedTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDCC22A3B9060062D2FA /* SegmentedTabsView.swift */; };
+		FD78EDD022A3CD3E0062D2FA /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDCF22A3CD3E0062D2FA /* CALayer+Extensions.swift */; };
 		FD80712B22A24900004837A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80712A22A24900004837A1 /* AppDelegate.swift */; };
 		FD80712D22A24900004837A1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80712C22A24900004837A1 /* BaseViewController.swift */; };
 		FD80713222A24901004837A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD80713122A24901004837A1 /* Assets.xcassets */; };
@@ -102,6 +103,7 @@
 		FD78EDC722A3A8570062D2FA /* ActivityTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableCell.swift; sourceTree = "<group>"; };
 		FD78EDC922A3ADBF0062D2FA /* ActivitiesTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewModel.swift; sourceTree = "<group>"; };
 		FD78EDCC22A3B9060062D2FA /* SegmentedTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedTabsView.swift; sourceTree = "<group>"; };
+		FD78EDCF22A3CD3E0062D2FA /* CALayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extensions.swift"; sourceTree = "<group>"; };
 		FD80712722A24900004837A1 /* World Dev Event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Dev Event.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD80712A22A24900004837A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD80712C22A24900004837A1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -186,7 +188,6 @@
 				EF6BB09E9B0DD70B7A77D21A /* Pods-World Dev Event.debug.xcconfig */,
 				073BBA62C44CEFBB5B9E4211 /* Pods-World Dev Event.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,6 +208,15 @@
 				FD78EDC922A3ADBF0062D2FA /* ActivitiesTableViewModel.swift */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		FD78EDCE22A3C7F50062D2FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD78EDCC22A3B9060062D2FA /* SegmentedTabsView.swift */,
+				FD78EDCB22A3AE7C0062D2FA /* TableView */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		FD80711E22A24900004837A1 = {
@@ -303,8 +313,7 @@
 			children = (
 				FD80717322A255C0004837A1 /* ActivitiesViewController.swift */,
 				FD80717522A255DD004837A1 /* ActivitiesPresenter.swift */,
-				FD78EDCC22A3B9060062D2FA /* SegmentedTabsView.swift */,
-				FD78EDCB22A3AE7C0062D2FA /* TableView */,
+				FD78EDCE22A3C7F50062D2FA /* Views */,
 			);
 			path = MainScene;
 			sourceTree = "<group>";
@@ -371,6 +380,7 @@
 			children = (
 				FD8071BB22A2AFA9004837A1 /* UIViewController+Extensions.swift */,
 				FD78EDBA22A38C340062D2FA /* UIView+Extensions.swift */,
+				FD78EDCF22A3CD3E0062D2FA /* CALayer+Extensions.swift */,
 				FD80719C22A2688F004837A1 /* UIColor+Extensions.swift */,
 				FD78EDC022A39FFF0062D2FA /* UITableView+Extensions.swift */,
 				FD8071CC22A2D34C004837A1 /* Error+Extensions.swift */,
@@ -608,6 +618,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD78EDD022A3CD3E0062D2FA /* CALayer+Extensions.swift in Sources */,
 				FD80712D22A24900004837A1 /* BaseViewController.swift in Sources */,
 				FD80719D22A2688F004837A1 /* UIColor+Extensions.swift in Sources */,
 				FD8071C022A2B219004837A1 /* AppConfigurator.swift in Sources */,

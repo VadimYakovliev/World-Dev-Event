@@ -23,6 +23,7 @@ final class ActivitiesViewController: BaseViewController {
     var presenter: ActivitiesPresenterContract!
     
     private var segmentedTabsView: SegmentedTabsView!
+    
     private let tableView = UITableView()
     private var tableViewAdapter = TableViewAdapter()
     
@@ -32,10 +33,9 @@ final class ActivitiesViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.configureTableView()
+
+        self.configurate()
         self.presenter.onViewDidLoad()
-        self.listenDidSelectCell()
     }
 }
 
@@ -50,9 +50,18 @@ extension ActivitiesViewController: ActivitiesViewContract {
 }
 
 private extension ActivitiesViewController {
-    func configureTableView() {
-        self.tableView.registerCellClass(ActivityTableCell.self)
+    func configurate() {
+        self.configureTableView()
+        self.configureSubviews()
         
+        self.listenDidSelectCell()
+        self.listenDidSelectSegmentTab()
+    }
+    
+    func configureTableView() {
+        self.tableView.backgroundColor = .clear
+        
+        self.tableView.registerCellClass(ActivityTableCell.self)
         self.tableView.separatorStyle = .none
         self.tableView.showsVerticalScrollIndicator = false
         self.tableView.alwaysBounceHorizontal = false
@@ -62,15 +71,37 @@ private extension ActivitiesViewController {
         
         self.tableView.delegate = self.tableViewAdapter
         self.tableView.dataSource = self.tableViewAdapter
+    }
+    
+    func configureSubviews() {
+        self.segmentedTabsView = SegmentedTabsView(titles: [Titles.Tabs.events, Titles.Tabs.shops])
+        self.view.add(self.segmentedTabsView, self.tableView)
         
-        self.view.addSubview(self.tableView)
+        self.describeSubviewsLayout()
+    }
+    
+    func describeSubviewsLayout() {
+        self.segmentedTabsView.snp.makeConstraints { make in
+            make.top.equalTo(self.view.snp.top)
+            make.left.right.equalToSuperview()
+        }
         
-        self.tableView.equalSizeToSuperview()
+        self.tableView.snp.makeConstraints { make in
+            make.top.equalTo(self.segmentedTabsView.snp.bottom)
+            make.left.right.equalToSuperview()
+            make.bottom.equalTo(self.view.snp.bottom)
+        }
     }
     
     func listenDidSelectCell() {
         self.tableViewAdapter.onSelectItemAtIndexPathHandler = { [weak self] indexPath in
             self?.presenter.onDidSelectCell(index: indexPath.row)
+        }
+    }
+    
+    func listenDidSelectSegmentTab() {
+        self.segmentedTabsView?.didSelectItemAtIndexAction = { [weak self] selectedIndex in
+            self?.presenter.switchState(index: selectedIndex)
         }
     }
 }

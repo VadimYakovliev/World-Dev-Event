@@ -41,6 +41,7 @@ final class AppConfigurator {
         appearance.barTintColor = Colors.orange
         appearance.tintColor = .white
         appearance.isTranslucent = false
+        appearance.shadowImage = UIImage()
         
         Fonts.roboto(type: .medium, size: 20.0)
             .map { appearance.titleTextAttributes = [.foregroundColor: UIColor.white, .font: $0] }

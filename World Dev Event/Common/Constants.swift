@@ -28,8 +28,8 @@ enum Titles {
     }
     
     enum Tabs {
-        static let events = "Events"
-        static let shops = "Shops"
+        static let events = "Events".uppercased()
+        static let shops = "Shops".uppercased()
     }
 }
 

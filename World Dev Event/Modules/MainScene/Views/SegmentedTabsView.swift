@@ -12,17 +12,22 @@ import SnapKit
 private let bottomBarHeight: CGFloat = 2
 private let viewHeight: CGFloat = 48
 private let fontSize: CGFloat = 14.0
+private let textAlpha: CGFloat = 0.5
+private let textColor = UIColor.white
 
 class SegmentedTabsView: UIView {
     private let segmentedControl: UISegmentedControl = {
         let control = UISegmentedControl()
         control.backgroundColor = Colors.orange
-        control.tintColor = .white
-        
-        Fonts.roboto(type: .medium, size: fontSize)
-            .map {
-                //        control.setTitleTextAttributes([.font: font, .foregroundColor: Colors.navy], for: .selected)
-                control.setTitleTextAttributes([.font: $0, .foregroundColor: UIColor.white], for: .normal)
+        control.tintColor = Colors.orange
+
+        Fonts.roboto(type: .medium, size: fontSize).map {
+            control.setTitleTextAttributes([.font: $0,
+                                            .foregroundColor: textColor],
+                                           for: .selected)
+            control.setTitleTextAttributes([.font: $0,
+                                            .foregroundColor: textColor.withAlphaComponent(textAlpha)],
+                                           for: .normal)
         }
 
         return control
@@ -47,9 +52,7 @@ class SegmentedTabsView: UIView {
     override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         
-        self.segmentedControl.addTarget(self,
-                                        action: #selector(self.segmentedItemChanged(_:)),
-                                        for: .valueChanged)
+        self.configure()
         self.add(self.segmentedControl, self.bottomBarView)
         self.describeSubviewsLayout()
     }
@@ -64,6 +67,15 @@ class SegmentedTabsView: UIView {
 }
 
 private extension SegmentedTabsView {
+    func configure() {
+        self.backgroundColor = Colors.orange
+        self.layer.shadow(color: .black)
+    
+        self.segmentedControl.addTarget(self,
+                                        action: #selector(self.segmentedItemChanged(_:)),
+                                        for: .valueChanged)
+    }
+    
     func describeSubviewsLayout() {
         self.segmentedControl.snp.makeConstraints { make in
             make.top.left.right.equalToSuperview()
