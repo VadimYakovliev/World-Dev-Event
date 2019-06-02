@@ -9,37 +9,13 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         self.configureView()
     }
-}
-
-private extension BaseViewController {
-    func configureView() {
-        self.view.backgroundColor = .white
-    }
-}
-
-extension BaseViewController: DefaultAlert {
-    enum AlertAction {
-        case defaultPressed
-        case cancelPressed
-    }
-}
-
-// MARK: - Alert view
-
-protocol DefaultAlert {
-    func showAlert(text: String,
-                   defaultButtonTitle: String,
-                   cancelButtonTitle: String?,
-                   completion: ((BaseViewController.AlertAction) -> Void)?)
-}
-
-extension DefaultAlert where Self: UIViewController {
+    
     func showAlert(text: String,
                    defaultButtonTitle: String,
                    cancelButtonTitle: String?,
@@ -59,5 +35,18 @@ extension DefaultAlert where Self: UIViewController {
             
             self.present(alertController, animated: true)
         }
+    }
+}
+
+private extension BaseViewController {
+    func configureView() {
+        self.view.backgroundColor = .white
+    }
+}
+
+extension BaseViewController {
+    enum AlertAction {
+        case defaultPressed
+        case cancelPressed
     }
 }
