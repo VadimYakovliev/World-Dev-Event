@@ -41,15 +41,18 @@ extension DetailsViewController: DetailsViewContract {
 
 private extension DetailsViewController {
     func configureTableView() {
-        self.tableView.backgroundColor = .clear
+        self.tableView.backgroundColor = Colors.greenLeaf
         
         self.tableView.registerCellClass(FullImageTableCell.self)
         self.tableView.registerCellClass(DetailsTableCell.self)
         
         self.tableView.separatorStyle = .none
         self.tableView.showsVerticalScrollIndicator = false
+        
         self.tableView.alwaysBounceHorizontal = false
-
+        self.tableView.bounces = false
+        self.tableView.bouncesZoom = false
+        
         self.tableView.rowHeight = UITableView.automaticDimension
 
         self.tableView.dataSource = self.tableViewAdapter

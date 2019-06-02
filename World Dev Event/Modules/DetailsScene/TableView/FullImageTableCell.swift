@@ -30,6 +30,7 @@ extension FullImageTableCell: Configurable {
 
 private extension FullImageTableCell {
     func configureCell() {
+        self.selectionStyle = .none
         self.configureImagePreview()
     }
     

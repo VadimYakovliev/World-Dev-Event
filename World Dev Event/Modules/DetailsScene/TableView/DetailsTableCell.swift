@@ -15,9 +15,12 @@ private let descriptFontSize: CGFloat = 16.0
 private let containerInset: CGFloat = 23.0
 private let containerHorizontalInsetRatio: CGFloat = 0.05
 
+private let buttonHeight: CGFloat = 50.0
+
 class DetailsTableCell: UITableViewCell {
     
     private let stackView = UIStackView()
+    private let button = UIButton(type: .system)
     
     private var titleLabel = UILabel()
     private var shortDescriptionLabel = UILabel()
@@ -41,7 +44,9 @@ extension DetailsTableCell: Configurable {
 
 private extension DetailsTableCell {
     func configureCell() {
+        self.selectionStyle = .none
         self.configureDescriptionLabel()
+        self.configureButton()
         self.configureLabelsWithStack()
     }
     
@@ -76,7 +81,28 @@ private extension DetailsTableCell {
                                            right: leftInset)
         
         self.stackView.snp.makeConstraints { make in
-            make.edges.equalTo(self.contentView).inset(containerInsets)
+            make.top.left.right.equalTo(self.contentView).inset(containerInsets)
+            make.bottom.equalTo(self.button.snp.top).offset(-containerInset)
         }
+    }
+    
+    func configureButton() {
+        self.button.backgroundColor = Colors.greenLeaf
+        self.button.setTitle(Titles.Buttons.showMap, for: .normal)
+        self.button.titleLabel?.font = Fonts.roboto(type: .medium, size: 14.0)
+        self.button.setTitleColor(.white, for: .normal)
+        
+        self.button.addTarget(self, action: #selector(self.buttonPressed), for: .touchUpInside)
+        
+        self.contentView.add(self.button)
+        
+        self.button.snp.makeConstraints { make in
+            make.left.right.bottom.equalToSuperview()
+            make.height.equalTo(buttonHeight)
+        }
+    }
+    
+    @objc func buttonPressed() {
+        print("Button tapped")
     }
 }
