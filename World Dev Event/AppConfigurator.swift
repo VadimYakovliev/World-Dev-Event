@@ -23,8 +23,6 @@ final class AppConfigurator {
     
     private func configure(window: UIWindow) {
         let navigationController = UINavigationController()
-        navigationController.hidesBarsOnSwipe = true
-        
         window.rootViewController = navigationController
         
         self.appCoordinator = AppCoordinator(navigationController: navigationController,
