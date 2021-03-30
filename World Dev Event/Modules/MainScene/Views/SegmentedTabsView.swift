@@ -13,13 +13,20 @@ private let bottomBarHeight: CGFloat = 2
 private let fontSize: CGFloat = 14.0
 private let textAlpha: CGFloat = 0.5
 private let textColor = UIColor.white
+private let tabAnimationDuration: TimeInterval = 0.25
 
 class SegmentedTabsView: UIView {
     private let segmentedControl: UISegmentedControl = {
         let control = UISegmentedControl()
         control.backgroundColor = Colors.orange
-        control.tintColor = Colors.orange
-
+        let tintColor = Colors.orange
+        
+        if #available(iOS 13.0, *) {
+            control.selectedSegmentTintColor = tintColor
+        } else {
+            control.tintColor = tintColor
+        }
+        
         Fonts.roboto(type: .medium, size: fontSize).map {
             control.setTitleTextAttributes([.font: $0,
                                             .foregroundColor: textColor],
@@ -90,14 +97,12 @@ private extension SegmentedTabsView {
     }
     
     @objc func segmentedItemChanged(_ sender: UISegmentedControl) {
-        self.animateBottomBarView()
+        self.animateBottomBarView(control: sender)
         self.didSelectItemAtIndexAction?(sender.selectedSegmentIndex)
     }
     
-    func animateBottomBarView() {
-        let control = self.segmentedControl
-        
-        UIView.animate(withDuration: 0.3) {
+    func animateBottomBarView(control: UISegmentedControl) {
+        UIView.animate(withDuration: tabAnimationDuration) {
             self.bottomBarView.frame.origin.x = (control.frame.width / CGFloat(control.numberOfSegments)) * CGFloat(control.selectedSegmentIndex)
         }
     }
