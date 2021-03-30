@@ -18,10 +18,12 @@ extension UIImageView {
     }
     
     func setImage(withUrl url: URL?) {
-        self.kf.setImage(with: url,
-                         placeholder: url == nil ? UIImage(named: imagePlaceholder) : nil,
-                         options: [.transition(.fade(transitionFade)),
-                                   .scaleFactor(UIScreen.main.scale),
-                                   .backgroundDecode])
+        self.kf.setImage(
+            with: url,
+            placeholder: UIImage(named: imagePlaceholder),
+            options: [.transition(.fade(transitionFade)),
+                      .scaleFactor(UIScreen.main.scale),
+                      .backgroundDecode]
+        )
     }
 }
