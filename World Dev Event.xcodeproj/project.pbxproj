@@ -3,12 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C2FC65724F57281DBA7889B5 /* Pods_World_Dev_Event.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CFB63A3F2E47C128E7FF9F /* Pods_World_Dev_Event.framework */; };
-		CC4E5A3F2794133CCE90D987 /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4823DF6F3CBBEADC00CFEE /* Pods_Networking.framework */; };
+		7668105826138290000865FB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7668105726138290000865FB /* SnapKit */; };
+		7668105C261382FE000865FB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7668105B261382FE000865FB /* Kingfisher */; };
 		FD78EDBB22A38C340062D2FA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDBA22A38C340062D2FA /* UIView+Extensions.swift */; };
 		FD78EDBD22A39E440062D2FA /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDBC22A39E440062D2FA /* Configurable.swift */; };
 		FD78EDBF22A39EC80062D2FA /* CellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78EDBE22A39EC80062D2FA /* CellConfigurator.swift */; };
@@ -92,12 +92,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		073BBA62C44CEFBB5B9E4211 /* Pods-World Dev Event.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World Dev Event.release.xcconfig"; path = "Target Support Files/Pods-World Dev Event/Pods-World Dev Event.release.xcconfig"; sourceTree = "<group>"; };
-		1E4823DF6F3CBBEADC00CFEE /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AAD14CCA6B5621BCACACA65 /* Pods-Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.release.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.release.xcconfig"; sourceTree = "<group>"; };
-		C2C649542F88CBB8F2FF88FA /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
-		E1CFB63A3F2E47C128E7FF9F /* Pods_World_Dev_Event.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_World_Dev_Event.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF6BB09E9B0DD70B7A77D21A /* Pods-World Dev Event.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World Dev Event.debug.xcconfig"; path = "Target Support Files/Pods-World Dev Event/Pods-World Dev Event.debug.xcconfig"; sourceTree = "<group>"; };
 		FD78EDBA22A38C340062D2FA /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		FD78EDBC22A39E440062D2FA /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		FD78EDBE22A39EC80062D2FA /* CellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurator.swift; sourceTree = "<group>"; };
@@ -163,8 +157,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7668105C261382FE000865FB /* Kingfisher in Frameworks */,
 				FD80716822A24F36004837A1 /* Networking.framework in Frameworks */,
-				C2FC65724F57281DBA7889B5 /* Pods_World_Dev_Event.framework in Frameworks */,
+				7668105826138290000865FB /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,33 +167,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC4E5A3F2794133CCE90D987 /* Pods_Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		477C32B89C12BF650950F5BD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1E4823DF6F3CBBEADC00CFEE /* Pods_Networking.framework */,
-				E1CFB63A3F2E47C128E7FF9F /* Pods_World_Dev_Event.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FBE2979D9C2C02A4F01274BE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C2C649542F88CBB8F2FF88FA /* Pods-Networking.debug.xcconfig */,
-				6AAD14CCA6B5621BCACACA65 /* Pods-Networking.release.xcconfig */,
-				EF6BB09E9B0DD70B7A77D21A /* Pods-World Dev Event.debug.xcconfig */,
-				073BBA62C44CEFBB5B9E4211 /* Pods-World Dev Event.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		FD78EDC622A3A7360062D2FA /* TableViewAdapter+Configurator */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,8 +217,6 @@
 				FD80712922A24900004837A1 /* World Dev Event */,
 				FD80715422A24F36004837A1 /* Networking */,
 				FD80712822A24900004837A1 /* Products */,
-				FBE2979D9C2C02A4F01274BE /* Pods */,
-				477C32B89C12BF650950F5BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -467,12 +439,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD80714422A24901004837A1 /* Build configuration list for PBXNativeTarget "World Dev Event" */;
 			buildPhases = (
-				5DCB7CADD0349BF888256E38 /* [CP] Check Pods Manifest.lock */,
 				FD80712322A24900004837A1 /* Sources */,
 				FD80712422A24900004837A1 /* Frameworks */,
 				FD80712522A24900004837A1 /* Resources */,
 				FD80716D22A24F36004837A1 /* Embed Frameworks */,
-				7239D87531242DA714814331 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -480,6 +450,10 @@
 				FD80716722A24F36004837A1 /* PBXTargetDependency */,
 			);
 			name = "World Dev Event";
+			packageProductDependencies = (
+				7668105726138290000865FB /* SnapKit */,
+				7668105B261382FE000865FB /* Kingfisher */,
+			);
 			productName = "World Dev Event";
 			productReference = FD80712722A24900004837A1 /* World Dev Event.app */;
 			productType = "com.apple.product-type.application";
@@ -488,7 +462,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD80716A22A24F36004837A1 /* Build configuration list for PBXNativeTarget "Networking" */;
 			buildPhases = (
-				AA8AED4516DA0266BEE0EFB4 /* [CP] Check Pods Manifest.lock */,
 				FD80714E22A24F36004837A1 /* Headers */,
 				FD80714F22A24F36004837A1 /* Sources */,
 				FD80715022A24F36004837A1 /* Frameworks */,
@@ -531,6 +504,10 @@
 				Base,
 			);
 			mainGroup = FD80711E22A24900004837A1;
+			packageReferences = (
+				7668105626138290000865FB /* XCRemoteSwiftPackageReference "SnapKit" */,
+				7668105A261382FE000865FB /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = FD80712822A24900004837A1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -561,70 +538,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5DCB7CADD0349BF888256E38 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-World Dev Event-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7239D87531242DA714814331 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-World Dev Event/Pods-World Dev Event-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-World Dev Event/Pods-World Dev Event-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-World Dev Event/Pods-World Dev Event-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AA8AED4516DA0266BEE0EFB4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Networking-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FD80712322A24900004837A1 /* Sources */ = {
@@ -830,7 +743,6 @@
 		};
 		FD80714522A24901004837A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF6BB09E9B0DD70B7A77D21A /* Pods-World Dev Event.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -850,7 +762,6 @@
 		};
 		FD80714622A24901004837A1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 073BBA62C44CEFBB5B9E4211 /* Pods-World Dev Event.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -870,7 +781,6 @@
 		};
 		FD80716B22A24F36004837A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2C649542F88CBB8F2FF88FA /* Pods-Networking.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -902,7 +812,6 @@
 		};
 		FD80716C22A24F36004837A1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AAD14CCA6B5621BCACACA65 /* Pods-Networking.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -962,6 +871,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7668105626138290000865FB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		7668105A261382FE000865FB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7668105726138290000865FB /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7668105626138290000865FB /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		7668105B261382FE000865FB /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7668105A261382FE000865FB /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FD80711F22A24900004837A1 /* Project object */;
 }
